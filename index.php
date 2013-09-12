@@ -43,17 +43,7 @@
                 <li><a href="#">Unsere Marken</a></li>
               </ul>
 
-              <ul class="right">
-                <li class="search">
-                  <form>
-                    <input type="search">
-                  </form>
-                </li>
-
-                <li class="has-button">
-                  <a class="small button" href="#">Search</a>
-                </li>
-              </ul>
+              
             </section>
         </nav>
      
