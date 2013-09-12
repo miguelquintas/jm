@@ -22,7 +22,7 @@
 
     <!-- Navigation -->
     
-      
+          <div class="fixed">
           <nav class="top-bar">
             <ul class="title-area">
               <!-- Title Area -->
@@ -48,7 +48,7 @@
         </nav>
      
       </div>
-
+    </div>
     <!-- End Navigation -->
 
     
