@@ -1,63 +1,67 @@
-<!DOCTYPE html>
-<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
 
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-	<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
+  <meta charset="utf-8" />
+
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+
   <title>Wildhardt Mode</title>
 
-  
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/foundation.css">
-  
 
   <script src="js/vendor/custom.modernizr.js"></script>
 
 </head>
 <body>
-
-	<div class="row">
+<div class="row">
   <div class="large-12 columns">
 
     <!-- Navigation -->
-
     
-      <nav class="top-bar">
-        <ul class="title-area">
-          <!-- Title Area -->
-          <li class="name">
-            <h1>
-              <a href="#">
-                Home
-              </a>
-            </h1>
-          </li>
-          <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
-        </ul>
+      
+          <nav class="top-bar">
+            <ul class="title-area">
+              <!-- Title Area -->
+              <li class="name">
+                <h1>
+                  <a href="#">
+                    Home
+                  </a>
+                </h1>
+              </li>
+              <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+            </ul>
 
-        <section class="top-bar-section">
-          <ul class="left">
-            <li><a href="#">Über uns</a></li>
-            <li><a href="#">Kontakte</a></li>
-          </ul>
+            <section class="top-bar-section">
+             <ul class="left">
+                <li><a href="#">Über uns</a></li>
+                <li><a href="#">Kontakte</a></li>
+                <li><a href="#">Unsere Marken</a></li>
+              </ul>
 
-          <ul class="right">
-            <li class="search">
-              <form>
-                <input type="search">
-              </form>
-            </li>
+              <ul class="right">
+                <li class="search">
+                  <form>
+                    <input type="search">
+                  </form>
+                </li>
 
-            <li class="has-button">
-              <a class="small button" href="#">Search</a>
-            </li>
-          </ul>
-        </section>
-      </nav>
-    
+                <li class="has-button">
+                  <a class="small button" href="#">Search</a>
+                </li>
+              </ul>
+            </section>
+        </nav>
+     
+      </div>
+
     <!-- End Navigation -->
-  
-    </div>
+
+    
   </div>
 
 
@@ -67,13 +71,17 @@
     <!-- Desktop Slider -->
 
       <div class="hide-for-small">
-        <div id="featured">
-              <img src="top1.jpg" alt="slide image">
-              <img src="top2.jpg" alt="slide image">
-              <img src="top3.jpg" alt="slide image">
-              <!-- <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image">
-              <img src="http://placehold.it/1000x400&text=Slide Image" alt="slide image"> -->
-          </div>
+        <div id="featured" data-orbit>
+              <img src="img/top1.jpg" alt="BlaBlaBLa">
+              <img src="img/top2.jpg" alt="slide image">
+              <img src="img/top3.jpg" alt="slide image">
+       
+        </div>
+         <!-- Timer and Play/Pause Button -->
+        <div class="orbit-timer">
+          <span></span>
+          <div class="orbit-progress" style="-webkit-transition: width 10s linear;"></div>
+        </div>
         </div>
 
     <!-- End Desktop Slider -->
@@ -84,7 +92,7 @@
 
     <div class="row">
       <div class="small-12 show-for-small"><br>
-        <img src="http://placehold.it/1000x600&text=For Small Screens" />
+        <img src="img/top1.jpg" />
       </div>
     </div>
 
@@ -101,24 +109,27 @@
     <!-- Thumbnails -->
 
         <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
+          <img src="img/boat.gif" />
+          <h6 class="panel">Boat, Bla bla</h6>
         </div>
 
-        <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
+         <div class="large-3 small-6 columns">
+          <img src="img/boat.gif" />
+          <h6 class="panel">Boat, Bla bla</h6>
         </div>
 
-        <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
+         <div class="large-3 small-6 columns">
+          <img src="img/boat.gif" />
+          <h6 class="panel">Boat, Bla bla</h6>
         </div>
 
-        <div class="large-3 small-6 columns">
-          <img src="http://placehold.it/250x250&text=Thumbnail" />
-          <h6 class="panel">Description</h6>
+         <div class="large-3 small-6 columns">
+          <img src="img/boat.gif" />
+          <h6 class="panel">Boat, Bla bla</h6>
         </div>
+
+      
+       
 
     <!-- End Thumbnails -->
 
@@ -140,8 +151,8 @@
           <div class="row">
           <div class="large-6 small-6 columns">
 
-            <h4>Header</h4><hr/>
-            <h5 class="subheader">Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis.
+            <h4>News</h4><hr/>
+            <h5 class="subheader"> Wir Haben Sommer Verkauf ! 
             </h5>
 
           <div class="show-for-small" align="center">
@@ -165,16 +176,12 @@
 
           <h4>Get In Touch!</h4><hr/>
 
-          <a href="#">
-          <div class="panel radius callout" align="center">
-            <strong>Call To Action!</strong>
-          </div>
+          <a class="large button expand" href="#">
+            Call To Action!
           </a>
 
-          <a href="#">
-          <div class="panel radius callout" align="center">
-            <strong>Call To Action!</strong>
-          </div>
+          <a class="large button expand" href="#">
+            Call To Action!
           </a>
 
         </div>
@@ -205,46 +212,22 @@
       </div>
     </div>
   </footer>
-  
+
+  <script>
+  document.write('<script src=js/vendor/' +
+  ('__proto__' in {} ? 'zepto' : 'jquery') +
+  '.js><\/script>')
+  </script>
   <script src="js/foundation.min.js"></script>
-  <!--
-  
-  <script src="js/foundation/foundation.js"></script>
-  
-  <script src="js/foundation/foundation.alerts.js"></script>
-  
-  <script src="js/foundation/foundation.clearing.js"></script>
-  
-  <script src="js/foundation/foundation.cookie.js"></script>
-  
-  <script src="js/foundation/foundation.dropdown.js"></script>
-  
-  <script src="js/foundation/foundation.forms.js"></script>
-  
-  <script src="js/foundation/foundation.joyride.js"></script>
-  
-  <script src="js/foundation/foundation.magellan.js"></script>
-  
-  <script src="js/foundation/foundation.orbit.js"></script>
-  
-  <script src="js/foundation/foundation.reveal.js"></script>
-  
-  <script src="js/foundation/foundation.section.js"></script>
-  
-  <script src="js/foundation/foundation.tooltips.js"></script>
-  
-  <script src="js/foundation/foundation.topbar.js"></script>
-  
-  <script src="js/foundation/foundation.interchange.js"></script>
-  
-  <script src="js/foundation/foundation.placeholder.js"></script>
-  
-  <script src="js/foundation/foundation.abide.js"></script>
-  
-  -->
-  
   <script>
     $(document).foundation();
   </script>
+  <script type="text/javascript">
+    $(window).load(function() {
+      $('#featured').orbit({ fluid: '2x1' });
+    });
+  </script>
+  <!-- End Footer -->
+
 </body>
 </html>
