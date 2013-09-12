@@ -110,7 +110,7 @@
 
         <div class="large-3 small-6 columns">
           <img src="img/boat.gif" />
-          <h6 class="panel">Boat, Bla bla</h6>
+          <h6 class="panel">Boat, Bla bla22</h6>
         </div>
 
          <div class="large-3 small-6 columns">
