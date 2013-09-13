@@ -151,82 +151,76 @@
 
 
 
-<div class="section-container auto" data-section>
-  <section>
-    <p class="title" data-section-title><a href="#panel1">Unsere Marken</a></p>
-    <div class="content" data-section-content>
-      <div class="row">
-    <div class="small-12 columns">
-      <div class="row">
+      <div class="section-container auto" data-section>
+        <section>
+          <p class="title" data-section-title><a href="#panel1">Unsere Marken</a></p>
+          <div class="content" data-section-content>
+          <div class="row">
+          <div class="small-12 columns">
+            <div class="row">
 
-    <!-- Thumbnails -->
+          <!-- Thumbnails -->
 
-        <div class="small-2 small-2 columns">
-          <img src="img/boat.gif" />
-          <h6 class="panel">Boat, Bla bla22</h6>
-        </div>
-
-
-         <div class="small-2 small-2 columns">
-          <img src="img/boat.gif" />
-          <h6 class="panel">Boat, Bla bla</h6>
-        </div>
-
-         <div class="small-2 small-2 columns">
-          <img src="img/boat.gif" />
-          <h6 class="panel">Boat, Bla bla</h6>
-        </div>
-
-         <div class="small-2 small-2 columns">
-          <img src="img/boat.gif" />
-          <h6 class="panel">Boat, Bla bla</h6>
-        </div>
-        <div class="small-2 small-2 columns">
-          <img src="img/boat.gif" />
-          <h6 class="panel">Boat, Bla bla22</h6>
-        </div>
-        <div class="small-2 small-2 columns">
-          <img src="img/boat.gif" />
-          <h6 class="panel">Boat, Bla bla22</h6>
-        </div>
-        <div class="small-2 small-2 columns">
-          <img src="img/boat.gif" />
-          <h6 class="panel">Boat, Bla bla22</h6>
-        </div>
-        <div class="small-2 small-2 columns">
-          <img src="img/boat.gif" />
-          <h6 class="panel">Boat, Bla bla22</h6>
-        </div>
-        <div class="small-2 small-2 columns">
-          <img src="img/boat.gif" />
-          <h6 class="panel">Boat, Bla bla22</h6>
-        </div>
-        <div class="small-2 small-2 columns">
-          <img src="img/boat.gif" />
-          <h6 class="panel">Boat, Bla bla22</h6>
-        </div>
-        <div class="small-2 small-2 columns">
-          <img src="img/boat.gif" />
-          <h6 class="panel">Boat, Bla bla22</h6>
-        </div>
-        <div class="small-2 small-2 columns">
-          <img src="img/boat.gif" />
-          <h6 class="panel">Boat, Bla bla22</h6>
-        </div>
-
-      
-       
-
-    <!-- End Thumbnails -->
-
-      </div>
-    </div>
-  </div>
-    </div>
-  </section>
+              <div class="small-2 small-2 columns">
+                <img src="img/boat.gif" />
+                <h6 class="panel">Boat, Bla bla22</h6>
+              </div>
 
 
-  
+               <div class="small-2 small-2 columns">
+                <img src="img/boat.gif" />
+                <h6 class="panel">Boat, Bla bla</h6>
+              </div>
+
+               <div class="small-2 small-2 columns">
+                <img src="img/boat.gif" />
+                <h6 class="panel">Boat, Bla bla</h6>
+              </div>
+
+               <div class="small-2 small-2 columns">
+                <img src="img/boat.gif" />
+                <h6 class="panel">Boat, Bla bla</h6>
+              </div>
+              <div class="small-2 small-2 columns">
+                <img src="img/boat.gif" />
+                <h6 class="panel">Boat, Bla bla22</h6>
+              </div>
+              <div class="small-2 small-2 columns">
+                <img src="img/boat.gif" />
+                <h6 class="panel">Boat, Bla bla22</h6>
+              </div>
+              <div class="small-2 small-2 columns">
+                <img src="img/boat.gif" />
+                <h6 class="panel">Boat, Bla bla22</h6>
+              </div>
+              <div class="small-2 small-2 columns">
+                <img src="img/boat.gif" />
+                <h6 class="panel">Boat, Bla bla22</h6>
+              </div>
+              <div class="small-2 small-2 columns">
+                <img src="img/boat.gif" />
+                <h6 class="panel">Boat, Bla bla22</h6>
+              </div>
+              <div class="small-2 small-2 columns">
+                <img src="img/boat.gif" />
+                <h6 class="panel">Boat, Bla bla22</h6>
+              </div>
+              <div class="small-2 small-2 columns">
+                <img src="img/boat.gif" />
+                <h6 class="panel">Boat, Bla bla22</h6>
+              </div>
+              <div class="small-2 small-2 columns">
+                <img src="img/boat.gif" />
+                <h6 class="panel">Boat, Bla bla22</h6>
+              </div>
+          <!-- End Thumbnails -->
+
+            </div>
+          </div>
+        </div>
+        </div>
+        </section>
+      </div>  
 
     <!-- Footer -->
 
