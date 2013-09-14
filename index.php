@@ -155,70 +155,50 @@
         <section>
           <p class="title" data-section-title><a href="#panel1">Unsere Marken</a></p>
           <div class="content" data-section-content>
-          <div class="row">
-          <div class="small-12 columns">
-            <div class="row">
+              <div class="row">
+              <div class="small-12 columns">
+              
 
-          <!-- Thumbnails -->
+              <!-- Thumbnails -->
+                     <div class="small-2 small-2 columns">
+                      <img src="brands/drykorn.jpeg" />
+                      <h6 class="panel">Drykorn</h6>
+                    </div>
 
-              <div class="small-2 small-2 columns">
-                <img src="img/boat.gif" />
-                <h6 class="panel">Boat, Bla bla22</h6>
-              </div>
+                     <div class="small-2 small-2 columns">
+                      <img src="brands/mac.gif" />
+                      <h6 class="panel">Mac Mode</h6>
+                    </div>
 
+                     <div class="small-2 small-2 columns">
+                      <img src="brands/marcopolo.png" />
+                      <h6 class="panel">Marc 'o Polo</h6>
+                    </div>
 
-               <div class="small-2 small-2 columns">
-                <img src="img/boat.gif" />
-                <h6 class="panel">Boat, Bla bla</h6>
-              </div>
+                     <div class="small-2 small-2 columns">
+                      <img src="brands/opus.png" />
+                      <h6 class="panel">Opus</h6>
+                    </div>
+                    <div class="small-2 small-2 columns">
+                      <img src="brands/scod.gif" />
+                      <h6 class="panel">Scotch & Soda</h6>
+                    </div>
+                    <div class="small-2 small-2 columns">
+                      <img src="brands/streeone.png" />
+                      <h6 class="panel">StreetOne</h6>
+                    </div>
+                    <div class="small-2 small-2 columns">
+                      <img src="brands/tamaris.jpeg" />
+                      <h6 class="panel">Tamaris</h6>
+                    </div>
+                  
 
-               <div class="small-2 small-2 columns">
-                <img src="img/boat.gif" />
-                <h6 class="panel">Boat, Bla bla</h6>
-              </div>
+              <!-- End Thumbnails -->
 
-               <div class="small-2 small-2 columns">
-                <img src="img/boat.gif" />
-                <h6 class="panel">Boat, Bla bla</h6>
+              
               </div>
-              <div class="small-2 small-2 columns">
-                <img src="img/boat.gif" />
-                <h6 class="panel">Boat, Bla bla22</h6>
               </div>
-              <div class="small-2 small-2 columns">
-                <img src="img/boat.gif" />
-                <h6 class="panel">Boat, Bla bla22</h6>
-              </div>
-              <div class="small-2 small-2 columns">
-                <img src="img/boat.gif" />
-                <h6 class="panel">Boat, Bla bla22</h6>
-              </div>
-              <div class="small-2 small-2 columns">
-                <img src="img/boat.gif" />
-                <h6 class="panel">Boat, Bla bla22</h6>
-              </div>
-              <div class="small-2 small-2 columns">
-                <img src="img/boat.gif" />
-                <h6 class="panel">Boat, Bla bla22</h6>
-              </div>
-              <div class="small-2 small-2 columns">
-                <img src="img/boat.gif" />
-                <h6 class="panel">Boat, Bla bla22</h6>
-              </div>
-              <div class="small-2 small-2 columns">
-                <img src="img/boat.gif" />
-                <h6 class="panel">Boat, Bla bla22</h6>
-              </div>
-              <div class="small-2 small-2 columns">
-                <img src="img/boat.gif" />
-                <h6 class="panel">Boat, Bla bla22</h6>
-              </div>
-          <!-- End Thumbnails -->
-
-            </div>
           </div>
-        </div>
-        </div>
         </section>
       </div>  
 
