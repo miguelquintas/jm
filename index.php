@@ -154,35 +154,32 @@
 
               <!-- Thumbnails -->
                      <div class="small-2 small-2 columns">
-                      <img src="brands/drykorn.jpeg" />
-                      <h6 class="panel">Drykorn</h6>
+                      <img src="brands/drykorn.jpeg" />         
                     </div>
 
                      <div class="small-2 small-2 columns">
                       <img src="brands/mac.gif" />
-                      <h6 class="panel">Mac Mode</h6>
+                 
                     </div>
 
                      <div class="small-2 small-2 columns">
                       <img src="brands/marcopolo.png" />
-                      <h6 class="panel">Marc 'o Polo</h6>
                     </div>
 
                      <div class="small-2 small-2 columns">
                       <img src="brands/opus.png" />
-                      <h6 class="panel">Opus</h6>
+                  
                     </div>
                     <div class="small-2 small-2 columns">
                       <img src="brands/scod.gif" />
-                      <h6 class="panel">Scotch & Soda</h6>
+                    
                     </div>
                     <div class="small-2 small-2 columns">
-                      <img src="brands/streeone.png" />
-                      <h6 class="panel">StreetOne</h6>
+                      <img src="brands/streeone.png"/>
+                      
                     </div>
                     <div class="small-2 small-2 columns">
-                      <img src="brands/tamaris.jpeg" />
-                      <h6 class="panel">Tamaris</h6>
+                      <img src="brands/tamaris.jpeg"/>
                     </div>
                   
 
