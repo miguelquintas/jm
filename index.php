@@ -127,19 +127,16 @@
         </div>
         </div>
 
-        <div class="large-4 columns hide-for-small">
-
-          <h4>Get In Touch!</h4><hr/>
-
-          <a class="large button expand" href="#">
-            Call To Action!
-          </a>
-
-          <a class="large button expand" href="#">
-            Call To Action!
-          </a>
+        <div class="large-4 columns">
+          <ul class="pricing-table">
+            <li class="title">Öffnungszeiten</li>
+            <li class="price">Mo - Fr: 8:30 - 18:30. </li>
+            <li class="price">Sa: 9:30 - 14:00. </li>
+          </ul>
 
         </div>
+
+
 
     <!-- End Content -->
 
@@ -147,11 +144,7 @@
     </div>
   </div>
 
-
-
-
-
-      <div class="section-container auto" data-section>
+<div class="section-container auto" data-section>
         <section>
           <p class="title" data-section-title><a href="#panel1">Unsere Marken</a></p>
           <div class="content" data-section-content>
@@ -201,6 +194,9 @@
           </div>
         </section>
       </div>  
+
+
+
 
     <!-- Footer -->
 
