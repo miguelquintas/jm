@@ -12,6 +12,10 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/foundation.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google font -->
+  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
   <script src="js/vendor/custom.modernizr.js"></script>
 

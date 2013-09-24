@@ -10,11 +10,10 @@ body {
   font-size: 100%; }
 
 body {
-  background: white;
-  color: #222222;
+  color: #FFF;
   padding: 0;
   margin: 0;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 1;
@@ -1061,7 +1060,8 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  /*font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;*/
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
   font-style: normal;
   color: #222222;
@@ -2812,7 +2812,7 @@ label.error {
   height: 45px;
   line-height: 45px;
   position: relative;
-  background: #111111;
+  background: #3D3D3D;
   margin-bottom: 1.875em; }
   .top-bar ul {
     margin-bottom: 0;
@@ -2883,7 +2883,7 @@ label.error {
     height: auto;
     background: transparent; }
     .top-bar.expanded .title-area {
-      background: #111111; }
+      background: #3A3A3A; }
     .top-bar.expanded .toggle-topbar a {
       color: #888888; }
       .top-bar.expanded .toggle-topbar a span {
@@ -2901,7 +2901,7 @@ label.error {
     width: 100%;
     height: auto;
     display: block;
-    background: #222222;
+    background: #3A3A3A;
     font-size: 16;
     margin: 0; }
   .top-bar-section .divider,
@@ -2919,7 +2919,7 @@ label.error {
     padding-left: 15px;
     font-size: 0.8125em;
     font-weight: bold;
-    background: #222222; }
+    background: #3A3A3A; }
     .top-bar-section ul li > a.button {
       background: #2ba6cb;
       font-size: 0.8125em; }
@@ -3046,8 +3046,7 @@ label.error {
           display: none; }
     .top-bar-section li a:not(.button) {
       padding: 0 15px;
-      line-height: 45px;
-      background: #111111; }
+      line-height: 45px; }
       .top-bar-section li a:not(.button).hover {
         background: black; }
     .top-bar-section .has-dropdown > a {
