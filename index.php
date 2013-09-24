@@ -131,19 +131,16 @@
         </div>
         </div>
 
-        <div class="large-4 columns hide-for-small">
-
-          <h4>Get In Touch!</h4><hr/>
-
-          <a class="large button expand" href="#">
-            Call To Action!
-          </a>
-
-          <a class="large button expand" href="#">
-            Call To Action!
-          </a>
+        <div class="large-4 columns">
+          <ul class="pricing-table">
+            <li class="title">Öffnungszeiten</li>
+            <li class="price">Mo - Fr: 8:30 - 18:30. </li>
+            <li class="price">Sa: 9:30 - 14:00. </li>
+          </ul>
 
         </div>
+
+
 
     <!-- End Content -->
 
@@ -151,11 +148,7 @@
     </div>
   </div>
 
-
-
-
-
-      <div class="section-container auto" data-section>
+<div class="section-container auto" data-section>
         <section>
           <p class="title" data-section-title><a href="#panel1">Unsere Marken</a></p>
           <div class="content" data-section-content>
@@ -165,35 +158,32 @@
 
               <!-- Thumbnails -->
                      <div class="small-2 small-2 columns">
-                      <img src="brands/drykorn.jpeg" />
-                      <h6 class="panel">Drykorn</h6>
+                      <img src="brands/drykorn.jpeg" />         
                     </div>
 
                      <div class="small-2 small-2 columns">
                       <img src="brands/mac.gif" />
-                      <h6 class="panel">Mac Mode</h6>
+                 
                     </div>
 
                      <div class="small-2 small-2 columns">
                       <img src="brands/marcopolo.png" />
-                      <h6 class="panel">Marc 'o Polo</h6>
                     </div>
 
                      <div class="small-2 small-2 columns">
                       <img src="brands/opus.png" />
-                      <h6 class="panel">Opus</h6>
+                  
                     </div>
                     <div class="small-2 small-2 columns">
                       <img src="brands/scod.gif" />
-                      <h6 class="panel">Scotch & Soda</h6>
+                    
                     </div>
                     <div class="small-2 small-2 columns">
-                      <img src="brands/streeone.png" />
-                      <h6 class="panel">StreetOne</h6>
+                      <img src="brands/streeone.png"/>
+                      
                     </div>
                     <div class="small-2 small-2 columns">
-                      <img src="brands/tamaris.jpeg" />
-                      <h6 class="panel">Tamaris</h6>
+                      <img src="brands/tamaris.jpeg"/>
                     </div>
                   
 
@@ -205,6 +195,9 @@
           </div>
         </section>
       </div>  
+
+
+
 
     <!-- Footer -->
 
