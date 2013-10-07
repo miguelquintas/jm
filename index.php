@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="css/style.css">
 
   <!-- Google font -->
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+  <!--<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>--> 
 
   <script src="js/vendor/custom.modernizr.js"></script>
 
@@ -41,7 +41,7 @@
             </ul>
 
             <section class="top-bar-section">
-             <ul class="left">
+             <ul>
                 <li><a href="#">Über uns</a></li>
                 <li><a href="#">Kontakte</a></li>
                 <li><a href="#">Unsere Marken</a></li>
