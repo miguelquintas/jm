@@ -228,7 +228,7 @@ function initialize() {
 <div class="section-container auto" data-section>
         <section>
           <p class="title" data-section-title><a href="#panel1">Kontakte</a></p>
-          <div class="small-2 large-2 columns">
+          <div class="small-4 large-2 columns">
           <ul class="pricing-table">
             <li class="title">Sie Finden uns auf: </li>
             <li class="price">Poststrasse 22, 65191 Wiesbaden </li>
