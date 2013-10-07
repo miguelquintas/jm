@@ -12,15 +12,29 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/foundation.css">
-  
-
+  <link rel="stylesheet" href="css/style.css">
   <!-- Google font -->
+
+
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
   <script src="js/vendor/custom.modernizr.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script>
+var map;
+function initialize() {
+  var mapOptions = {
+    zoom: 8,
+    center: new google.maps.LatLng(50.08373, 8.28307),
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
+  map = new google.maps.Map(document.getElementById('google-map'),
+      mapOptions);
+}
+    </script>
 
 </head>
-<body>
+<body >
 <div class="row">
   <div class="large-12 columns">
 
@@ -63,7 +77,6 @@
     <div class="large-12 columns">
 
     <!-- Desktop Slider -->
-
       <div class="hide-for-small">
         <div id="featured" data-orbit>
               <img src="img/top1.jpg" alt="BlaBlaBLa">
@@ -122,7 +135,6 @@
 
           </div>
           <div class="large-6 small-6 columns">
-
             <p>Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
           </p>
         </div>
@@ -146,21 +158,6 @@
     </div>
   </div>
 
-
-<!-- contacts  -->
-<div class="section-container auto" data-section>
-        <section>
-          <p class="title" data-section-title><a href="#panel1">Kontakte</a></p>
-          <div class="content" data-section-content>
-             
-             <div id="map-canvas"></div>
-          </div>
-        </section>
-</div> 
-<!-- End Contacts -->
-
-
-
 <div class="section-container auto" data-section>
         <section>
           <p class="title" data-section-title><a href="#panel1">Unsere Marken</a></p>
@@ -170,6 +167,7 @@
               
 
               <!-- Thumbnails -->
+              
                      <div class="small-2 small-2 columns">
                       <img src="brands/drykorn.jpeg" />         
                     </div>
@@ -208,7 +206,16 @@
           </div>
         </section>
 </div>  
-
+<div class="section-container auto" data-section>
+        <section>
+          <p class="title" data-section-title><a href="#panel1">Kontakte</a></p>
+          <div class="content" data-section-content>
+              <div class="row">
+              <div id="google-map" class="six columns" style="height: 300px"></div>
+              </div>
+          </div>
+        </section>
+</div> 
 
 
 
@@ -240,14 +247,14 @@
   </script>
   <script src="js/foundation.min.js"></script>
   <script>
+    google.maps.event.addDomListener(window, 'load', initialize);
     $(document).foundation();
   </script>
   <script type="text/javascript">
-
     $(window).load(function() {
       $('#featured').orbit({ fluid: '2x1' });
-
     });
+    
   </script>
   <!-- End Footer -->
 
