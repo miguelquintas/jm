@@ -21,16 +21,35 @@
   <script src="js/vendor/custom.modernizr.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
   <script>
-var map;
+
 function initialize() {
-  var mapOptions = {
-    zoom: 8,
-    center: new google.maps.LatLng(50.08373, 8.28307),
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  map = new google.maps.Map(document.getElementById('google-map'),
-      mapOptions);
-}
+      var myLatlng = new google.maps.LatLng(50.08373, 8.28307);
+      var myOptions = {
+        zoom: 15,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.HYBRID,
+      }
+      var map = new google.maps.Map(document.getElementById("google-map"), myOptions);
+
+     var contentString = "Wildhardt women's wear Wiesbaden";
+
+    var infowindow = new google.maps.InfoWindow({
+        content: contentString
+    });
+
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        title:"Wildhardt women's wear Wiesbaden"
+    });
+
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.open(map,marker);
+    });
+    
+  
+    
+  }
     </script>
 
 </head>
@@ -209,9 +228,18 @@ function initialize() {
 <div class="section-container auto" data-section>
         <section>
           <p class="title" data-section-title><a href="#panel1">Kontakte</a></p>
+          <div class="small-2 large-2 columns">
+          <ul class="pricing-table">
+            <li class="title">Sie Finden uns auf: </li>
+            <li class="price">Poststrasse 22, 65191 Wiesbaden </li>
+            <li class="title">Und Telefon ist:  </li>
+            <li class="price">0611 2048078 </li>
+          </ul>
+
+        </div>
           <div class="content" data-section-content>
               <div class="row">
-              <div id="google-map" class="six columns" style="height: 300px"></div>
+              <div id="google-map" class="large-6 columns" style="height: 500px"></div>
               </div>
           </div>
         </section>
