@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/foundation.css">
-  <link rel="stylesheet" href="css/style.css">
+  
 
   <!-- Google font -->
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
@@ -140,13 +140,26 @@
 
         </div>
 
-
-
     <!-- End Content -->
 
       </div>
     </div>
   </div>
+
+
+<!-- contacts  -->
+<div class="section-container auto" data-section>
+        <section>
+          <p class="title" data-section-title><a href="#panel1">Kontakte</a></p>
+          <div class="content" data-section-content>
+             
+             <div id="map-canvas"></div>
+          </div>
+        </section>
+</div> 
+<!-- End Contacts -->
+
+
 
 <div class="section-container auto" data-section>
         <section>
@@ -194,7 +207,7 @@
               </div>
           </div>
         </section>
-      </div>  
+</div>  
 
 
 
@@ -230,8 +243,10 @@
     $(document).foundation();
   </script>
   <script type="text/javascript">
+
     $(window).load(function() {
       $('#featured').orbit({ fluid: '2x1' });
+
     });
   </script>
   <!-- End Footer -->
