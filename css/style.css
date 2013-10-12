@@ -20,6 +20,14 @@ body {
         
     }
 
+    #fblike iframe {
+    width: auto !important;
+}
+
+#fblike .fb_edge_comment_widget iframe {
+    width: auto !important;
+}
+
 .zinfowindow{
 	color:black;
 	width:auto;

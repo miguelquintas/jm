@@ -20,7 +20,9 @@
 
   <script src="js/vendor/custom.modernizr.js"></script>
   <script src="js/googleapi.js"></script>
+  
   <script>
+
 
 function initialize() {
       var myLatlng = new google.maps.LatLng(50.08373, 8.28307);
@@ -54,6 +56,15 @@ function initialize() {
 
 </head>
 <body >
+<!--Facebook code -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1&appId=179139395446653";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div class="row">
   <div class="large-12 columns">
 
@@ -235,7 +246,6 @@ function initialize() {
                     <li class="locality">65191 Wiesbaden </li>
                     <li class="locality">Telefon: 0611 2048078 </li>
                   </ul>
-
                 </div>
 
                     <div class="large-8 columns" data-section-content>
@@ -245,6 +255,14 @@ function initialize() {
             </div>
           </div>
 </div>
+
+<div class="row">
+          <h4><a href="#contactos">Social</a></h4>
+          <div id="contactos" class="panel radius">
+                <div class="fb-like-box" data-href="https://www.facebook.com/pages/Wildhardt-womens-wear-Wiesbaden/314463841687" data-width="400px" data-height="The pixel height of the plugin" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
+          </div>
+</div>
+
 
 
 
