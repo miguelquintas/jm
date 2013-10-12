@@ -19,7 +19,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
   <script src="js/vendor/custom.modernizr.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script src="js/googleapi.js"></script>
   <script>
 
 function initialize() {
@@ -27,20 +27,20 @@ function initialize() {
       var myOptions = {
         zoom: 15,
         center: myLatlng,
-        mapTypeId: google.maps.MapTypeId.HYBRID,
+        mapTypeId: google.maps.MapTypeId.TERRAIN,
       }
       var map = new google.maps.Map(document.getElementById("google-map"), myOptions);
 
-     var contentString = "Wildhardt women's wear Wiesbaden";
+     var contentString = "<div class=\"zinfowindow\">Wildhardt Women's Wiesbaden<\div>";
 
     var infowindow = new google.maps.InfoWindow({
-        content: contentString
+        content: contentString,
     });
 
     var marker = new google.maps.Marker({
         position: myLatlng,
         map: map,
-        title:"Wildhardt women's wear Wiesbaden"
+        title:"Wildhardt Women's wear Wiesbaden"       
     });
 
     google.maps.event.addListener(marker, 'click', function() {
@@ -75,9 +75,9 @@ function initialize() {
 
             <section class="top-bar-section">
              <ul class="left">
-                <li><a href="#">Über uns</a></li>
-                <li><a href="#">Kontakte</a></li>
-                <li><a href="#">Unsere Marken</a></li>
+                <li><a href="#sobrenos">Über uns</a></li>
+                <li><a href="#contactos">Kontakte</a></li>
+                <li><a href="#marcas">Unsere Marken</a></li>
               </ul>
 
               
@@ -163,7 +163,7 @@ function initialize() {
         </div>
 
         <div class="large-4 columns">
-          <ul class="pricing-table">
+          <ul class="pricing-table radius">
             <li class="title">Öffnungszeiten</li>
             <li class="price">Mo - Fr: 8:30 - 18:30. </li>
             <li class="price">Sa: 9:30 - 14:00. </li>
@@ -177,14 +177,11 @@ function initialize() {
     </div>
   </div>
 
-<div class="section-container auto" data-section>
-        <section>
-          <p class="title" data-section-title><a href="#panel1">Unsere Marken</a></p>
-          <div class="content" data-section-content>
+<div class="row">     
+          <h4><a href="#marcas">Unsere Marken</a></h4>
+          <div id="marcas"class="panel radius" data-section-content>
               <div class="row">
               <div class="small-12 columns">
-              
-
               <!-- Thumbnails -->
               
                      <div class="small-2 small-2 columns">
@@ -215,35 +212,40 @@ function initialize() {
                     <div class="small-2 small-2 columns">
                       <img src="brands/tamaris.jpeg"/>
                     </div>
-                  
-
-              <!-- End Thumbnails -->
-
-              
+              <!-- End Thumbnails -->              
               </div>
               </div>
           </div>
-        </section>
 </div>  
-<div class="section-container auto" data-section>
-        <section>
-          <p class="title" data-section-title><a href="#panel1">Kontakte</a></p>
-          <div class="large-4 columns">
-            <ul class="pricing-table">
-              <li class="title">Sie Finden uns auf: </li>
-              <li class="price">Poststrasse 22, 65191 Wiesbaden </li>
-              <li class="title">Und Telefon ist:  </li>
-              <li class="price">0611 2048078 </li>
-            </ul>
+<div class="row">
+          <h4><a href="#contactos">Kontakte</a></h4>
+          <div id="contactos" class="panel radius">
+            <div class="row">
+                <div class="large-4 columns">
 
-        </div>
-          <div class="content" data-section-content>
-              <div class="row">
-              <div id="google-map" class="large-12 columns" style="height: 500px"></div>
-              </div>
+                  <ul class="vcard">
+                    <li class="fn">Wildhardt women's wear Wiesbaden:</li>
+                    <li class="street-address">Adresse: Poststrasse 22</li>
+                    <li class="locality">65191 Wiesbaden </li>
+                    <li class="locality">Telefon: 0611 2048078 </li>
+                  </ul>
+                  <ul class="vcard">
+                    <li class="fn">Second store:</li>
+                    <li class="street-address">Adresse: Poststrasse 22</li>
+                    <li class="locality">65191 Wiesbaden </li>
+                    <li class="locality">Telefon: 0611 2048078 </li>
+                  </ul>
+
+                </div>
+
+                    <div class="large-8 columns" data-section-content>
+                    
+                    <div id="google-map" style="height: 300px"></div>
+                </div>
+            </div>
           </div>
-        </section>
-</div> 
+</div>
+
 
 
 

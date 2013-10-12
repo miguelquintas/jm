@@ -8,3 +8,20 @@ body {
 {
 	background: #3A3A3A;
 }
+
+#google-map *, #google-map *:before, #google-map *:after {
+         
+    }
+    #google-map img {
+        max-width: none;
+    }
+    #google-map label {
+        width: auto;
+        
+    }
+
+.zinfowindow{
+	color:black;
+	width:auto;
+	height:20px;
+}
