@@ -19,7 +19,7 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
   <script src="js/vendor/custom.modernizr.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+  <script src="js/googleapi.js"></script>
   <script>
 
 function initialize() {
