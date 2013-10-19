@@ -11,14 +11,14 @@
         $searchBy = $_GET['searchBy'];
     }
 
-	include 'header.php';	
+	include 'header.php';
 ?>
 
 <div id="header">
 	<?php include 'menu.php'; ?>
 </div>
 <div id="content">
-    
+	MAIN!!
 </div>
 
 <?php include('footer.php'); ?>

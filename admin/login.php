@@ -32,7 +32,7 @@ if($count == 1)
 	$_SESSION['myusername'] = 'myUser';
 	$_SESSION['mypassword'] = 'myPass';
  
-	header("location:produtos.php");
+	header("location:main.php");
 }
 else 
 {
