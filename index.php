@@ -70,7 +70,7 @@ function initialize() {
 
     <!-- Navigation -->
     
-          <div class="fixed">
+          <div class="fixed"> 
           <nav class="top-bar">
             <ul class="title-area">
               <!-- Title Area -->
@@ -156,7 +156,6 @@ function initialize() {
             <h4>News</h4><hr/>
             <h5 class="subheader"> Wir Haben Sommer Verkauf ! 
             </h5>
-
           <div class="show-for-small" align="center">
             <a href="#" class="small radius button">Call To Action!</a><br>
 
@@ -178,8 +177,7 @@ function initialize() {
             <li class="title">Öffnungszeiten</li>
             <li class="price">Mo - Fr: 8:30 - 18:30. </li>
             <li class="price">Sa: 9:30 - 14:00. </li>
-          </ul>
-
+          </ul>  
         </div>
 
     <!-- End Content -->
@@ -188,7 +186,7 @@ function initialize() {
     </div>
   </div>
 
-<div class="row">     
+<div class="row hide-for-small">     
           <h4><a href="#marcas">Unsere Marken</a></h4>
           <div id="marcas"class="panel radius" data-section-content>
               <div class="row">
@@ -223,7 +221,7 @@ function initialize() {
                     <div class="small-2 small-2 columns">
                       <img src="brands/tamaris.jpeg"/>
                     </div>
-              <!-- End Thumbnails -->              
+              <!-- End Thumbnails -->  
               </div>
               </div>
           </div>
@@ -241,9 +239,9 @@ function initialize() {
                     <li class="locality">Telefon: 0611 2048078 </li>
                   </ul>
                   <ul class="vcard">
-                    <li class="fn">Second store:</li>
-                    <li class="street-address">Adresse: Poststrasse 22</li>
-                    <li class="locality">65191 Wiesbaden </li>
+                    <li class="fn">Wildhardt women's wear Wiesbaden:</li>
+                    <li class="street-address">Adresse: Rathausstraße 47</li>
+                    <li class="locality">65203 Wiesbaden </li>
                     <li class="locality">Telefon: 0611 2048078 </li>
                   </ul>
                 </div>
@@ -273,16 +271,11 @@ function initialize() {
     <div class="large-12 columns">
       <hr>
       <div class="row">
-        <div class="large-6 columns">
-          <p>&copy; Copyright no one at all. Go to town.</p>
+        <div class="large-6 columns subheader">
+          &copy; Copyright 2013
         </div>
-        <div class="large-6 columns">
-          <ul class="inline-list right">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-          </ul>
+        <div class="large-12 columns">
+            <h6 class="subheader">All trademarks and registered trademarks are the property of their respective owners.</h6>
         </div>
       </div>
     </div>
