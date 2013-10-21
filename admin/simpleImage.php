@@ -20,7 +20,7 @@
 *
 */
  
-class SimpleImage {
+class SimpleImage  {
  
    var $image;
    var $image_type;
