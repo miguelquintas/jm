@@ -194,7 +194,7 @@ function initialize() {
               <!-- Thumbnails -->
               
                      <div class="small-2 small-2 columns">
-                      <img src="brands/drykorn.jpeg" />         
+                      <img src="brands/drykorn2.png" />         
                     </div>
 
                      <div class="small-2 small-2 columns">
