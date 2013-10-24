@@ -81,7 +81,7 @@ function initialize() {
                   </a>
                 </h1>
               </li>
-              <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+              <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
             </ul>
 
             <section class="top-bar-section">
@@ -90,7 +90,7 @@ function initialize() {
                 <li><a href="#contactos">Kontakte</a></li>
                 <li><a href="#marcas">Unsere Marken</a></li>
               </ul>
-
+              
               
             </section>
         </nav>
@@ -109,7 +109,7 @@ function initialize() {
     <!-- Desktop Slider -->
       <div class="hide-for-small">
         <div id="featured" data-orbit>
-              <img src="img/top1.jpg" alt="BlaBlaBLa">
+              <img src="img/top1.png" alt="BlaBlaBLa">
               <img src="img/top2.jpg" alt="slide image">
               <img src="img/top3.jpg" alt="slide image">
        
