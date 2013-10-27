@@ -102,16 +102,23 @@ function initialize() {
     
   </div>
 
-
+<div class="row">
+    <div class="large-12 colums">
+      <h1> Willkommen zu Wilhardt Mode </h1>
+    </div>
+</div>
   <div class="row">
     <div class="large-12 columns">
 
     <!-- Desktop Slider -->
       <div class="hide-for-small">
         <div id="featured" data-orbit>
-              <img src="img/top1.png" alt="BlaBlaBLa">
+              <img src="img/top1.jpg" alt="BlaBlaBLa">
               <img src="img/top2.jpg" alt="slide image">
               <img src="img/top3.jpg" alt="slide image">
+              <img src="img/top4.jpg" alt="BlaBlaBLa">
+              <img src="img/top5.jpg" alt="slide image">
+              <img src="img/top6.jpg" alt="slide image">
        
         </div>
          <!-- Timer and Play/Pause Button -->
@@ -147,38 +154,35 @@ function initialize() {
 
     <!-- Content -->
 
-        <div class="large-8 columns">
+        <div class="large-12 columns">
           <div class="panel radius">
 
           <div class="row">
-          <div class="large-6 small-6 columns">
+          <div class="large-6 columns">
 
             <h4>News</h4><hr/>
-            <h5 class="subheader"> Wir Haben Sommer Verkauf ! 
-            </h5>
-          <div class="show-for-small" align="center">
-            <a href="#" class="small radius button">Call To Action!</a><br>
-
-            <a href="#" class="small radius button">Call To Action!</a>
-          </div>
-
-          </div>
-          <div class="large-6 small-6 columns">
+            <h5 class="subheader"> Wir Haben Sommer Verkauf ! </h5>
             <p>Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
-          </p>
+           
+          </div>
+            <div class="large-6 columns">
+               <ul class="pricing-table radius">
+                  <li class="title">Öffnungszeiten</li>
+                  <li class="price">Mo - Fr: 8:30 - 18:30 </li>
+                  <li class="price">Sa: 9:30 - 14:00 </li>
+
+                </ul> 
+            </div>
+        </div>
+      
+           
         </div>
 
         </div>
         </div>
-        </div>
+        
 
-        <div class="large-4 columns">
-          <ul class="pricing-table radius">
-            <li class="title">Öffnungszeiten</li>
-            <li class="price">Mo - Fr: 8:30 - 18:30. </li>
-            <li class="price">Sa: 9:30 - 14:00. </li>
-          </ul>  
-        </div>
+        
 
     <!-- End Content -->
 
@@ -198,7 +202,7 @@ function initialize() {
                     </div>
 
                      <div class="small-2 small-2 columns">
-                      <img src="brands/mac.gif" />
+                      <img src="brands/mac.png" />
                  
                     </div>
 
@@ -211,15 +215,12 @@ function initialize() {
                   
                     </div>
                     <div class="small-2 small-2 columns">
-                      <img src="brands/scod.gif" />
+                      <img src="brands/scod.png" />
                     
                     </div>
+                   
                     <div class="small-2 small-2 columns">
-                      <img src="brands/streeone.png"/>
-                      
-                    </div>
-                    <div class="small-2 small-2 columns">
-                      <img src="brands/tamaris.jpeg"/>
+                      <img src="brands/wellensteyn.png"/>
                     </div>
               <!-- End Thumbnails -->  
               </div>
@@ -256,8 +257,8 @@ function initialize() {
 
 <div class="row">
           <h4><a href="#contactos">Social</a></h4>
-          <div id="contactos" class="panel radius">
-                <div class="fb-like-box" data-href="https://www.facebook.com/pages/Wildhardt-womens-wear-Wiesbaden/314463841687" data-width="400px" data-height="The pixel height of the plugin" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
+          <div id="social" class="panel radius">
+                <div class="fb-like-box" data-href="https://www.facebook.com/pages/Wildhardt-womens-wear-Wiesbaden/314463841687" data-width="400" data-height="The pixel height of the plugin" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
           </div>
 </div>
 
