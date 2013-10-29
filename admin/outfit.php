@@ -29,7 +29,7 @@
                 <table cellspacing="10">
                     <tr>
                     <?php
-                        $query = mysql_query("SELECT * FROM Gallery ORDER BY id ASC");
+                        $query = mysql_query("SELECT * FROM Outfit ORDER BY id ASC");
                         $count = mysql_num_rows($query);
 
                         while ($row = mysql_fetch_array($query))
@@ -47,7 +47,7 @@
                 </table>
             </td>
         </tr>
-        <form method="POST" action="actionGallery.php" enctype="multipart/form-data">
+        <form method="POST" action="actionOutfit.php" enctype="multipart/form-data">
         <tr height="30">
             <td width="100">Upload photos: </td>
         </tr>

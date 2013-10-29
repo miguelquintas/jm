@@ -22,41 +22,52 @@
     <br/>
     <table>
         <tr>
-            <td>Pick photos to show</td>
+            <td>News:</td>
         </tr>
         <tr>
             <td>
                 <table cellspacing="10">
-                    <tr>
                     <?php
-                        $query = mysql_query("SELECT * FROM Gallery ORDER BY id ASC");
+                        $query = mysql_query("SELECT * FROM News ORDER BY id ASC");
                         $count = mysql_num_rows($query);
 
                         while ($row = mysql_fetch_array($query))
                         {
                             ?>
+                            <tr>
                                 <td>
-                                    <img src=<?php echo '../img/thumb/' . $row['image_name']; ?> width="150"/>
-                                    <br/ >
-                                    <?php echo $row['description']; ?>
+                                    <li>
+                                    <b><?php echo $row['title']; ?></b>
+                                    <br />
+                                    <?php echo $row['text']; ?>
+                                    </li>
                                 </td>
+                            </tr>
                             <?
                         }
                     ?>
-                    </tr>
                 </table>
             </td>
         </tr>
-        <form method="POST" action="actionGallery.php" enctype="multipart/form-data">
+        <form method="POST" action="actionNews.php">
         <tr height="30">
-            <td width="100">Upload photos: </td>
+            <td width="100">Add News: </td>
         </tr>
         <tr>
-            <td><input type="file" name="images[]" multiple="multiple"></input><td>            
+            <td>
+                Title:<br/>
+                <input type="text" name="title"></input>
+            <td>            
+        </tr>
+        <tr>
+            <td>
+                Text:<br/>
+                <textarea name="text" cols="30" rows="10"></textarea>
+            <td>            
         </tr>
         <tr height="30">
             <td><a href="main.php" class="cancelButton">Cancelar</a></td>
-            <td><input type="submit" name="InsertPhotos" value="Submit"/></td>
+            <td><input type="submit" name="InsertNews" value="Submit"/></td>
         </tr>
         </form>
     </table>    	

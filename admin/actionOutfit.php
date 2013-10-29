@@ -24,7 +24,7 @@ if (isset($_POST['InsertPhotos']))
 		{
 			foreach ($imagesReturn as $image) 
 			{
-				$query = 'INSERT INTO Gallery (image_name, description) VALUES ("'.$image.'", "some description")';
+				$query = 'INSERT INTO Outfit (image_name, description) VALUES ("'.$image.'", "some description")';
 			
 				if (!mysql_query($query, $con))
 			  	{
@@ -36,7 +36,7 @@ if (isset($_POST['InsertPhotos']))
 
 			mysql_close($con);
 				
-			header('location: gallery.php');
+			header('location: outfit.php');
 		}
 	}
 }
@@ -61,7 +61,7 @@ if (isset($_GET['id']))
 	
 	mysql_close($con);
 	
-	header('location: gallery.php');
+	header('location: outfit.php');
 
 }
 
