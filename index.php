@@ -177,13 +177,11 @@ function initialize() {
   <br>
 
 
-  <div class="row">
+    <div class="row">
     <div class="large-12 columns">
-      <div class="row">
-
+    <h4><a href="#neuigkeiten">Neuigkeiten</a></h4>
+    <div class="row">
     <!-- Content -->
-
-        <div class="large-12 columns">
           <div class="panel radius">
 
           <div class="row">
@@ -199,20 +197,11 @@ function initialize() {
                   <li class="title">Öffnungszeiten</li>
                   <li class="price">Mo - Fr: 8:30 - 18:30 </li>
                   <li class="price">Sa: 9:30 - 14:00 </li>
-
                 </ul> 
             </div>
         </div>
-      
-           
         </div>
-
-        </div>
-        </div>
-        
-
-        
-
+      </div>
     <!-- End Content -->
 
       </div>
@@ -221,9 +210,9 @@ function initialize() {
 
 <div class="row hide-for-small">     
           <h4><a href="#marcas">Unsere Marken</a></h4>
-          <div id="marcas"class="panel radius" data-section-content>
+          <div class="panel radius" id="marcas" data-section-content>
               <div class="row">
-              <div class="small-12 columns">
+              <div class="large-12 columns">
               <!-- Thumbnails -->
               
                      <div class="small-2 small-2 columns">
@@ -321,6 +310,13 @@ function initialize() {
     google.maps.event.addDomListener(window, 'load', initialize);
     $(document).foundation();
      $("ol").remove(".orbit-bullets");
+  </script>
+  <script type="text/javascript">
+    $(window).load(function() {
+      $('#featured').orbit({ fluid: '2x1' });
+
+    });
+    
   </script>
   <!-- End Footer -->
 
