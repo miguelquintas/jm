@@ -112,15 +112,44 @@ function initialize() {
 
     <!-- Desktop Slider -->
       <div class="hide-for-small">
-        <div id="featured" data-orbit>
-              <img src="img/top1.jpg" alt="BlaBlaBLa">
-              <img src="img/top2.jpg" alt="slide image">
-              <img src="img/top3.jpg" alt="slide image">
-              <img src="img/top4.jpg" alt="BlaBlaBLa">
-              <img src="img/top5.jpg" alt="slide image">
-              <img src="img/top6.jpg" alt="slide image">
-       
-        </div>
+         <ul id="featured1" data-orbit data-options="timer_speed:5000;">
+              <li>
+                <img src="img/top1.jpg" />
+                <div class="orbit-caption">
+                  Caption One. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                </div>
+              </li>
+              <li>
+                <img src="img/top2.jpg" />
+                <div class="orbit-caption">
+                  Caption Two. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                </div>
+              </li>
+              <li>
+                <img src="img/top3.jpg" />
+                <div class="orbit-caption">
+                  Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                </div>
+              </li>
+              <li>
+                <img src="img/top4.jpg" />
+                <div class="orbit-caption">
+                  Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                </div>
+              </li>
+              <li>
+                <img src="img/top5.jpg" />
+                <div class="orbit-caption">
+                  Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                </div>
+              </li>
+              <li>
+                <img src="img/top6.jpg" />
+                <div class="orbit-caption">
+                  Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                </div>
+              </li>
+            </ul>
          <!-- Timer and Play/Pause Button -->
         <div class="orbit-timer">
           <span></span>
@@ -291,12 +320,7 @@ function initialize() {
   <script>
     google.maps.event.addDomListener(window, 'load', initialize);
     $(document).foundation();
-  </script>
-  <script type="text/javascript">
-    $(window).load(function() {
-      $('#featured').orbit({ fluid: '2x1' });
-    });
-    
+     $("ol").remove(".orbit-bullets");
   </script>
   <!-- End Footer -->
 
