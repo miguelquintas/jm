@@ -40,3 +40,13 @@ body {
 	height:20px;
 }
 
+.center {
+   display: inline-block;
+ }
+
+.row_full{
+  .row;
+  max-width:none;
+  margin-left:0px;
+  margin-right:0px;
+}

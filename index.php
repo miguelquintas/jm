@@ -62,7 +62,7 @@ function initialize() {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1&appId=179139395446653";
+  js.src = "//connect.facebook.net/de_DE/all.js#xfbml=1&appId=172193856308272";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div class="row">
@@ -95,24 +95,17 @@ function initialize() {
             </section>
         </nav>
      
-      </div>
-    </div>
-    <!-- End Navigation -->
-
-    
-  </div>
-
-<div class="row">
-    <div class="large-12 colums">
-      <h1> Willkommen zu Wilhardt Mode </h1>
-    </div>
+      </div> 
+  <!-- End Navigation -->
+  </div>    
 </div>
-  <div class="row">
-    <div class="large-12 columns">
 
+<div class="row_full"> 
+    <div class="large-12 columns hide-for-small">
+    <h1> Willkommen zu Wilhardt Mode </h1>
     <!-- Desktop Slider -->
-      <div class="hide-for-small">
-         <ul id="featured1" data-orbit data-options="timer_speed:5000;">
+        <div class="preloader"></div>
+         <ul id="featured1" data-orbit data-options="timer_speed:5000;bullets:false;">
               <li>
                 <img src="img/top1.jpg" />
                 <div class="orbit-caption">
@@ -155,31 +148,24 @@ function initialize() {
           <span></span>
           <div class="orbit-progress" style="-webkit-transition: width 10s linear;"></div>
         </div>
-        </div>
-
+    </div>
     <!-- End Desktop Slider -->
 
-
     <!-- Mobile Header -->
-
-
     <div class="row">
       <div class="small-12 show-for-small"><br>
         <img src="img/top1.jpg" />
       </div>
     </div>
-
-
-  <!-- End Mobile Header -->
-
-    </div>
+    <!-- End Mobile Header -->
   </div>
+ 
   <br>
 
 
     <div class="row">
-    <div class="large-12 columns">
     <h4><a href="#neuigkeiten">Neuigkeiten</a></h4>
+    <div class="large-12 columns">
     <div class="row">
     <!-- Content -->
           <div class="panel radius">
@@ -195,8 +181,8 @@ function initialize() {
             <div class="large-6 columns">
                <ul class="pricing-table radius">
                   <li class="title">Öffnungszeiten</li>
-                  <li class="price">Mo - Fr: 8:30 - 18:30 </li>
-                  <li class="price">Sa: 9:30 - 14:00 </li>
+                  <li class="price">Montag - Freitag: 8:30 - 18:30 </li>
+                  <li class="price">Samstags: 9:30 - 14:00 </li>
                 </ul> 
             </div>
         </div>
@@ -206,10 +192,10 @@ function initialize() {
 
       </div>
     </div>
-  </div>
+  
 
 <div class="row hide-for-small">     
-          <h4><a href="#marcas">Unsere Marken</a></h4>
+          <h4><a class="anchor" href="#marcas">Unsere Marken</a></h4>
           <div class="panel radius" id="marcas" data-section-content>
               <div class="row">
               <div class="large-12 columns">
@@ -255,13 +241,13 @@ function initialize() {
                     <li class="fn">Wildhardt women's wear Wiesbaden:</li>
                     <li class="street-address">Adresse: Poststrasse 22</li>
                     <li class="locality">65191 Wiesbaden </li>
-                    <li class="locality">Telefon: 0611 2048078 </li>
+                    <li class="locality">Telefon: <a href:"tel:0611 2048078">0611 2048078 </a> </li>
                   </ul>
                   <ul class="vcard">
                     <li class="fn">Wildhardt women's wear Wiesbaden:</li>
                     <li class="street-address">Adresse: Rathausstraße 47</li>
                     <li class="locality">65203 Wiesbaden </li>
-                    <li class="locality">Telefon: 0611 2048078 </li>
+                    <li class="locality">Telefon: <a href:"tel:0611 2048078">0611 2048078 </a> </li>
                   </ul>
                 </div>
 
@@ -273,7 +259,7 @@ function initialize() {
           </div>
 </div>
 
-<div class="row">
+<div class="row hide-for-small">
           <h4><a href="#contactos">Social</a></h4>
           <div id="social" class="panel radius">
                 <div class="fb-like-box" data-href="https://www.facebook.com/pages/Wildhardt-womens-wear-Wiesbaden/314463841687" data-width="400" data-height="The pixel height of the plugin" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
@@ -309,7 +295,6 @@ function initialize() {
   <script>
     google.maps.event.addDomListener(window, 'load', initialize);
     $(document).foundation();
-     $("ol").remove(".orbit-bullets");
   </script>
   <script type="text/javascript">
     $(window).load(function() {
