@@ -20,9 +20,10 @@
 <div id="content">
     <br/>
     <br/>
+    <form method="POST" action="actionOutfit.php">
     <table>
         <tr>
-            <td>Pick photos to show</td>
+            <td>Current Outfits</td>
         </tr>
         <tr>
             <td>
@@ -31,6 +32,7 @@
                     <?php
                         $query = mysql_query("SELECT * FROM Outfit ORDER BY id ASC");
                         $count = mysql_num_rows($query);
+                        $counter = 0;
 
                         while ($row = mysql_fetch_array($query))
                         {
@@ -38,15 +40,25 @@
                                 <td>
                                     <img src=<?php echo '../img/thumb/' . $row['image_name']; ?> width="150"/>
                                     <br/ >
-                                    <?php echo $row['description']; ?>
+                                    <input type="checkbox" name="option[]" value=<?php echo $row['id']; ?>>&nbsp;Delete<br>
                                 </td>
                             <?
+                            if ($counter > 0 && $counter % 6 == 0)
+                            {
+                                ?></tr><tr><?    
+                            }
+                            $counter++;
                         }
                     ?>
-                    </tr>
                 </table>
             </td>
         </tr>
+    </table>
+    <input type="submit" name="RemovePhotos" value="Remove Photos"/>
+    </form>
+    <br />
+    <br />
+    <table>
         <form method="POST" action="actionOutfit.php" enctype="multipart/form-data">
         <tr height="30">
             <td width="100">Upload photos: </td>

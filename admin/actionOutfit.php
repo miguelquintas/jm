@@ -41,28 +41,29 @@ if (isset($_POST['InsertPhotos']))
 	}
 }
 
-// pick selected photos to show
-if (isset($_POST['PickPhotos']))
-{
-
-}
-
 // remove selected photos
-if (isset($_GET['id']))
+if (isset($_POST['RemovePhotos']))
 {
-	$id = $_GET['id'];
+	if (isset($_POST['option']))
+	{
+		foreach ($_POST['option'] as $option) 
+		{
+			$query = 'DELETE FROM Outfit WHERE id = "'.$option.'"';
 	
-	$query = 'DELETE FROM produto WHERE id = "'.$id.'"';
-	
-	if (!mysql_query($query, $con))
-  	{
-  		die('Error: '.mysql_error($con));
-  	}
-	
-	mysql_close($con);
-	
-	header('location: outfit.php');
-
+			if (!mysql_query($query, $con))
+	  		{
+	  			die('Error: '.mysql_error($con));
+	  		}
+		}
+		
+		mysql_close($con);
+		
+		header('location: outfit.php');
+	}
+	else
+	{
+		header('location: outfit.php');
+	}	
 }
 
 function upload_images($arrayOfImages)

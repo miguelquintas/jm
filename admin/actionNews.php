@@ -28,21 +28,28 @@ if (isset($_POST['InsertNews']))
 }
 
 // remove selected news
-if (isset($_GET['id']))
+if (isset($_POST['RemoveNews']))
 {
-	$id = $_GET['id'];
+	if (isset($_POST['option']))
+	{
+		foreach ($_POST['option'] as $option) 
+		{
+			$query = 'DELETE FROM News WHERE id = "'.$option.'"';
 	
-	$query = 'DELETE FROM produto WHERE id = "'.$id.'"';
-	
-	if (!mysql_query($query, $con))
-  	{
-  		die('Error: '.mysql_error($con));
-  	}
-	
-	mysql_close($con);
-	
-	header('location: outfit.php');
-
+			if (!mysql_query($query, $con))
+	  		{
+	  			die('Error: '.mysql_error($con));
+	  		}
+		}
+		
+		mysql_close($con);
+		
+		header('location: news.php');
+	}
+	else
+	{
+		header('location: news.php');
+	}	
 }
 
 ?>

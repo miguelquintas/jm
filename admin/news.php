@@ -20,9 +20,10 @@
 <div id="content">
     <br/>
     <br/>
+    <form method="POST" action="actionNews.php">
     <table>
         <tr>
-            <td>News:</td>
+            <td>Current News:</td>
         </tr>
         <tr>
             <td>
@@ -36,7 +37,8 @@
                             ?>
                             <tr>
                                 <td>
-                                    <li>
+
+                                    <li><input type="checkbox" name="option[]" value=<?php echo $row['id']; ?>>
                                     <b><?php echo $row['title']; ?></b>
                                     <br />
                                     <?php echo $row['text']; ?>
@@ -49,6 +51,12 @@
                 </table>
             </td>
         </tr>
+    </table>
+    <input type="submit" name="RemoveNews" value="Remove News"/>
+    </form>
+    <br />
+    <br />
+    <table>
         <form method="POST" action="actionNews.php">
         <tr height="30">
             <td width="100">Add News: </td>
