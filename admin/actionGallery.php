@@ -36,7 +36,7 @@ if (isset($_POST['InsertPhotos']))
 
 			mysql_close($con);
 				
-			header('location: gallery.php');
+			header('location:gallery.php');
 		}
 	}
 }

@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  include ('connection.php');
+?>
+
 
 <!DOCTYPE html>
 <!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
@@ -89,6 +94,7 @@ function initialize() {
                 <li><a href="#sobrenos">Über uns</a></li>
                 <li><a href="#contactos">Kontakte</a></li>
                 <li><a href="#marcas">Unsere Marken</a></li>
+                <li><a href="#fotos">Galerie</a></li>
               </ul>
               
               
@@ -166,32 +172,65 @@ function initialize() {
     <div class="row">
     <h4><a href="#neuigkeiten">Neuigkeiten</a></h4>
     <div class="large-12 columns">
-    <div class="row">
     <!-- Content -->
+    <div class="row">
           <div class="panel radius">
 
           <div class="row">
-          <div class="large-6 columns">
-
-            <h4>News</h4><hr/>
-            <h5 class="subheader"> Wir Haben Sommer Verkauf ! </h5>
-            <p>Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
-           
-          </div>
             <div class="large-6 columns">
-               <ul class="pricing-table radius">
-                  <li class="title">Öffnungszeiten</li>
-                  <li class="price">Montag - Freitag: 8:30 - 18:30 </li>
-                  <li class="price">Samstags: 9:30 - 14:00 </li>
-                </ul> 
+
+                <h4>News</h4><hr/>
+                <h5 class="subheader"> Wir Haben Sommer Verkauf ! </h5>
+                <p>Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
+               
             </div>
-        </div>
+            <div class="large-6 columns">
+                   <ul class="pricing-table radius">
+                      <li class="title">Öffnungszeiten</li>
+                      <li class="price">Montag - Freitag: 8:30 - 18:30 </li>
+                      <li class="price">Samstags: 9:30 - 14:00 </li>
+                    </ul> 
+            </div>
+          </div>
         </div>
       </div>
     <!-- End Content -->
 
       </div>
     </div>
+
+    <!-- Gallery -->
+
+<div class="row">
+    <h4><a href="#fotos">Galerie</a></h4>
+    <div class="large-12 columns">
+    <!-- Content -->
+    <ul class="clearing-thumbs" data-clearing>
+
+      <?php
+                        $query = mysql_query("SELECT * FROM Gallery ORDER BY id ASC");
+                        $count = mysql_num_rows($query);
+
+                        while ($row = mysql_fetch_array($query))
+                        {
+                           
+                            ?>
+                                    <li> <a href="<?php echo 'img/'.$row['image_name']; ?>"> <img src=<?php echo 'img/thumb/'.$row['image_name']; ?> width="100"/>
+                            <?
+                        }
+      ?>
+
+
+
+  <!--<li><a href="img/01383508963.jpg"><img src="img/thumb/01383508963.jpg"></a></li> -->
+  
+</ul>
+    <!-- End Content -->
+
+      </div>
+    </div>
+
+    <!-- End Gallery-->
   
 
 <div class="row hide-for-small">     
