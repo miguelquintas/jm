@@ -92,12 +92,12 @@ function initialize() {
             <section class="top-bar-section">
              <ul class="left">
                 <li><a href="#sobrenos">Über uns</a></li>
+                <li><a href="#out_mon">Outfit das Monates</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#marken">Unsere Marken</a></li>
                 <li><a href="#contactos">Kontakte</a></li>
-                <li><a href="#marcas">Unsere Marken</a></li>
-                <li><a href="#fotos">Galerie</a></li>
+                <li><a href="#social">Social</a></li>
               </ul>
-              
-              
             </section>
         </nav>
      
@@ -108,7 +108,7 @@ function initialize() {
 
 <div class="row_full"> 
     <div class="large-12 columns hide-for-small">
-    <h1> Willkommen zu Wilhardt Mode </h1>
+    <h2> Willkommen zu Wilhardt Mode </h2>
     <!-- Desktop Slider -->
         <div class="preloader"></div>
          <ul id="featured1" data-orbit data-options="timer_speed:5000;bullets:false;">
@@ -170,7 +170,7 @@ function initialize() {
 
 
     <div class="row">
-    <h4><a href="#neuigkeiten">Neuigkeiten</a></h4>
+    <h4><a name="neuigkeiten">Neuigkeiten</a></h4>
     <div class="large-12 columns">
     <!-- Content -->
     <div class="row">
@@ -178,11 +178,29 @@ function initialize() {
 
           <div class="row">
             <div class="large-6 columns">
+                <ul id="featured2" data-orbit data-options="timer_speed:8000;bullets:false;navigation_arrows:false;slide_number:false;animation_speed:4000;">
+                    
+                      
+                    <?php
+                                    $query = mysql_query("SELECT * FROM News ORDER BY id DESC limit 10");
+                                    $count = mysql_num_rows($query);
 
-                <h4>News</h4><hr/>
-                <h5 class="subheader"> Wir Haben Sommer Verkauf ! </h5>
-                <p>Suspendisse ultrices ornare tempor. Aenean eget ultricies libero. Phasellus non ipsum eros. Vivamus at dignissim massa. Aenean dolor libero, blandit quis interdum et, malesuada nec ligula. Nullam erat erat, eleifend sed pulvinar ac. Suspendisse ultrices ornare tempor. Aenean eget ultricies libero.
-               
+                                    while ($row = mysql_fetch_array($query))
+                                    {
+                                       
+                                        ?>
+                                                <li data-orbit-slide="headline-1">
+                                                <h2> <?php echo $row[title];?>  </h2>
+                                                <?php echo '<p>'.$row[text].'</p>'; ?>
+                                                </li>
+                                        <?
+                                    }
+                    ?>
+                    
+                </ul>
+                
+                
+
             </div>
             <div class="large-6 columns">
                    <ul class="pricing-table radius">
@@ -199,33 +217,66 @@ function initialize() {
       </div>
     </div>
 
-    <!-- Gallery -->
+    <!-- Outfit of the month -->
 
 <div class="row">
-    <h4><a href="#fotos">Galerie</a></h4>
+    <h4><a name="out_mon">Outfit das Monates</a></h4>
     <div class="large-12 columns">
-    <!-- Content -->
-    <ul class="clearing-thumbs" data-clearing>
+      <div class="row">
+          <div class="panel radius">
+                <!-- Content -->
+                <ul class="clearing-thumbs" data-clearing>
 
-      <?php
-                        $query = mysql_query("SELECT * FROM Gallery ORDER BY id ASC");
-                        $count = mysql_num_rows($query);
+                  <?php
+                                    $query = mysql_query("SELECT * FROM Outfit ORDER BY id ASC");
+                                    $count = mysql_num_rows($query);
 
-                        while ($row = mysql_fetch_array($query))
-                        {
-                           
-                            ?>
-                                    <li> <a href="<?php echo 'img/'.$row['image_name']; ?>"> <img src=<?php echo 'img/thumb/'.$row['image_name']; ?> width="100"/>
-                            <?
-                        }
-      ?>
+                                    while ($row = mysql_fetch_array($query))
+                                    {
+                                       
+                                        ?>
+                                                <li> <a href="<?php echo 'img/'.$row['image_name']; ?>"> <img src=<?php echo 'img/thumb/'.$row['image_name']; ?> width="200"/>
+                                        <?
+                                    }
+                  ?>
+                <!--<li><a href="img/01383508963.jpg"><img src="img/thumb/01383508963.jpg"></a></li> --> 
+                </ul>
+                <!-- End Content -->
+          </div>
+      </div>
+
+      </div>
+    </div>
+
+    <!-- End utfit of the month -->
 
 
+    <!-- Gallery -->
+<div class="row hide-on-small">
+    <h4><a name="galerie">Galerie</a></h4>
+    <div class="large-12 columns">
+      <div class="row">
+          <div class="panel radius">
+                <!-- Content -->
+                <ul class="clearing-thumbs" data-clearing>
 
-  <!--<li><a href="img/01383508963.jpg"><img src="img/thumb/01383508963.jpg"></a></li> -->
-  
-</ul>
-    <!-- End Content -->
+                  <?php
+                                    $query = mysql_query("SELECT * FROM Gallery ORDER BY id ASC");
+                                    $count = mysql_num_rows($query);
+
+                                    while ($row = mysql_fetch_array($query))
+                                    {
+                                       
+                                        ?>
+                                                <li> <a href="<?php echo 'img/'.$row['image_name']; ?>"> <img src=<?php echo 'img/thumb/'.$row['image_name']; ?> width="100"/>
+                                        <?
+                                    }
+                  ?>
+                <!--<li><a href="img/01383508963.jpg"><img src="img/thumb/01383508963.jpg"></a></li> --> 
+                </ul>
+                <!-- End Content -->
+          </div>
+      </div>
 
       </div>
     </div>
@@ -234,7 +285,7 @@ function initialize() {
   
 
 <div class="row hide-for-small">     
-          <h4><a class="anchor" href="#marcas">Unsere Marken</a></h4>
+          <h4><a name="marken">Unsere Marken</a></h4>
           <div class="panel radius" id="marcas" data-section-content>
               <div class="row">
               <div class="large-12 columns">
@@ -271,8 +322,8 @@ function initialize() {
           </div>
 </div>  
 <div class="row">
-          <h4><a href="#contactos">Kontakte</a></h4>
-          <div id="contactos" class="panel radius">
+          <h4><a name="contactos">Kontakte</a></h4>
+          <div  class="panel radius">
             <div class="row">
                 <div class="large-4 columns">
 
@@ -299,7 +350,7 @@ function initialize() {
 </div>
 
 <div class="row hide-for-small">
-          <h4><a href="#contactos">Social</a></h4>
+          <h4><a name="social">Social</a></h4>
           <div id="social" class="panel radius">
                 <div class="fb-like-box" data-href="https://www.facebook.com/pages/Wildhardt-womens-wear-Wiesbaden/314463841687" data-width="400" data-height="The pixel height of the plugin" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
           </div>
@@ -332,8 +383,9 @@ function initialize() {
   </script>
   <script src="js/foundation.min.js"></script>
   <script>
-    google.maps.event.addDomListener(window, 'load', initialize);
     $(document).foundation();
+    google.maps.event.addDomListener(window, 'load', initialize);
+    
   </script>
   <script type="text/javascript">
     $(window).load(function() {
