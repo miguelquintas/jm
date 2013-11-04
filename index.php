@@ -108,12 +108,14 @@ function initialize() {
 
 <div class="row_full"> 
     <div class="large-12 columns hide-for-small">
-    <h2> Willkommen zu Wilhardt Mode </h2>
+    
     <!-- Desktop Slider -->
         <div class="preloader"></div>
+        <h3> Willkommen zu Wilhardt Mode </h3>
          <ul id="featured1" data-orbit data-options="timer_speed:5000;bullets:false;">
               <li>
-                <img src="img/top1.jpg" />
+                <img src="img/top1.jpg"/>
+
                 <div class="orbit-caption">
                   Caption One. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                 </div>
@@ -126,12 +128,6 @@ function initialize() {
               </li>
               <li>
                 <img src="img/top3.jpg" />
-                <div class="orbit-caption">
-                  Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </div>
-              </li>
-              <li>
-                <img src="img/top4.jpg" />
                 <div class="orbit-caption">
                   Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
                 </div>
