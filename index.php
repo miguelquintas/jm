@@ -105,44 +105,30 @@ function initialize() {
   <!-- End Navigation -->
   </div>    
 </div>
-
+<br />
+<br />
+<br />
 <div class="row_full"> 
-    <div class="large-12 columns hide-for-small">
+    <div class="large-12">
     
     <!-- Desktop Slider -->
         <div class="preloader"></div>
-        <h3> Willkommen zu Wilhardt Mode </h3>
-         <ul id="featured1" data-orbit data-options="timer_speed:5000;bullets:false;">
+        <!--<h3> Willkommen zu Wilhardt Mode </h3>-->
+         <ul id="featured1" data-orbit data-options="timer_speed:5000;bullets:false;animation:fade;pause_on_hover:false;navigation_arrows:false;slide_number:false;">
               <li>
                 <img src="img/top1.jpg"/>
-
-                <div class="orbit-caption">
-                  Caption One. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </div>
               </li>
               <li>
                 <img src="img/top2.jpg" />
-                <div class="orbit-caption">
-                  Caption Two. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </div>
               </li>
               <li>
                 <img src="img/top3.jpg" />
-                <div class="orbit-caption">
-                  Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </div>
               </li>
               <li>
                 <img src="img/top5.jpg" />
-                <div class="orbit-caption">
-                  Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </div>
               </li>
               <li>
                 <img src="img/top6.jpg" />
-                <div class="orbit-caption">
-                  Caption Three. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-                </div>
               </li>
             </ul>
          <!-- Timer and Play/Pause Button -->
@@ -162,8 +148,9 @@ function initialize() {
     <!-- End Mobile Header -->
   </div>
  
-  <br>
-
+<br />
+<br />
+<br />
 
     <div class="row">
     <h4><a name="neuigkeiten">Neuigkeiten</a></h4>
@@ -174,7 +161,7 @@ function initialize() {
 
           <div class="row">
             <div class="large-6 columns">
-                <ul id="featured2" data-orbit data-options="timer_speed:8000;bullets:false;navigation_arrows:false;slide_number:false;animation_speed:4000;">
+                <ul id="featured2" data-orbit data-options="timer_speed:5000;bullets:false;animation:fade;pause_on_hover:false;navigation_arrows:false;slide_number:false;">
                     
                       
                     <?php
@@ -214,7 +201,8 @@ function initialize() {
     </div>
 
     <!-- Outfit of the month -->
-
+<br />
+<br />
 <div class="row">
     <h4><a name="out_mon">Outfit das Monates</a></h4>
     <div class="large-12 columns">
@@ -245,8 +233,8 @@ function initialize() {
     </div>
 
     <!-- End utfit of the month -->
-
-
+<br />
+<br />
     <!-- Gallery -->
 <div class="row hide-on-small">
     <h4><a name="galerie">Galerie</a></h4>
@@ -279,7 +267,8 @@ function initialize() {
 
     <!-- End Gallery-->
   
-
+<br />
+<br />
 <div class="row hide-for-small">     
           <h4><a name="marken">Unsere Marken</a></h4>
           <div class="panel radius" id="marcas" data-section-content>
@@ -316,7 +305,9 @@ function initialize() {
               </div>
               </div>
           </div>
-</div>  
+</div>
+<br />
+<br />  
 <div class="row">
           <h4><a name="contactos">Kontakte</a></h4>
           <div  class="panel radius">
@@ -344,7 +335,8 @@ function initialize() {
             </div>
           </div>
 </div>
-
+<br />
+<br />
 <div class="row hide-for-small">
           <h4><a name="social">Social</a></h4>
           <div id="social" class="panel radius">
@@ -381,14 +373,6 @@ function initialize() {
   <script>
     $(document).foundation();
     google.maps.event.addDomListener(window, 'load', initialize);
-    
-  </script>
-  <script type="text/javascript">
-    $(window).load(function() {
-      $('#featured').orbit({ fluid: '2x1' });
-
-    });
-    
   </script>
   <!-- End Footer -->
 
