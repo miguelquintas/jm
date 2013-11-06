@@ -52,7 +52,7 @@
             </td>
         </tr>
     </table>
-    <input type="submit" name="RemoveNews" value="Remove News"/>
+    <input type="submit" name="RemoveNews" value="Remove News" class="submitButton"/>
     </form>
     <br />
     <br />
@@ -74,8 +74,8 @@
             <td>            
         </tr>
         <tr height="30">
-            <td><a href="main.php" class="cancelButton">Cancelar</a></td>
-            <td><input type="submit" name="InsertNews" value="Submit"/></td>
+            <td><a href="main.php" class="cancelButton">Cancel</a></td>
+            <td><input type="submit" name="InsertNews" value="Submit" class="submitButton"/></td>
         </tr>
         </form>
     </table>    	

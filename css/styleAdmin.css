@@ -1,3 +1,92 @@
 body{
 	background: #FFF;
+	font-family: 'Josefin Sans', sans-serif;
+	width: 960px;
+	margin: auto;
+	font-size: 13px;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+	border: none;
+	outline: none;
+}
+	
+a img{
+	border: none;	
+}
+
+#menu{
+	width:320px;
+	margin:auto;
+	margin-top: 20px;
+}
+
+#menu a{
+	padding: 10 20px 10 20px;
+}
+
+.menu_title a{
+	padding: 5px 20px 5px 20px;
+	font-size:12px;
+	color:black;
+}
+
+.menu_title a:hover{
+	background-color: black;
+	color: white;
+}
+
+input[type=text]{
+	width: 250px;
+	padding: 5px;
+	border: 1px solid #ededed;
+	-moz-border-radius: 5px; /* Firefox */
+	-webkit-border-radius: 5px; /* Safari, Chrome */
+	border-radius: 5px;
+}
+
+textarea{
+	width: 250px;
+	height: 100px;
+	padding: 5px;
+	border: 1px solid #ededed;
+	-moz-border-radius: 5px; /* Firefox */
+	-webkit-border-radius: 5px; /* Safari, Chrome */
+	border-radius: 5px;
+}
+
+.cancelButton{
+	width: 200px;
+	padding: 5px 20px;
+	background-color: gray;
+	color: #000;
+	cursor: pointer;
+	-moz-border-radius: 5px; /* Firefox */
+	-webkit-border-radius: 5px; /* Safari, Chrome */
+	border-radius: 5px;
+}
+
+.cancelButton:hover{
+	background-color: #000;
+	color: #ededed;
+	cursor: pointer;
+}
+
+.submitButton{
+	padding: 5px;
+	border: 1px solid #ededed;
+	-moz-border-radius: 5px; /* Firefox */
+	-webkit-border-radius: 5px; /* Safari, Chrome */
+	border-radius: 5px;
+	background-color: gray;
+	color: #000;
+	cursor: pointer;
+}
+
+.submitButton:hover{
+	background-color: #000;
+	color: #ededed;
+	cursor: pointer;
 }

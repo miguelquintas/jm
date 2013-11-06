@@ -38,7 +38,7 @@
                         {
                             ?>
                                 <td>
-                                    <img src=<?php echo '../img/thumb/' . $row['image_name']; ?> width="150"/>
+                                    <img src=<?php echo '../img/thumb/' . $row['image_name']; ?> width="120"/>
                                     <br/ >
                                     <input type="checkbox" name="option[]" value=<?php echo $row['id']; ?>>&nbsp;Delete<br>
                                 </td>
@@ -54,7 +54,7 @@
             </td>
         </tr>
     </table>
-    <input type="submit" name="RemovePhotos" value="Remove Photos"/>
+    <input type="submit" name="RemovePhotos" value="Remove Photos" class="submitButton"/>
     </form>
     <br />
     <br />
@@ -67,8 +67,8 @@
             <td><input type="file" name="images[]" multiple="multiple"></input><td>            
         </tr>
         <tr height="30">
-            <td><a href="main.php" class="cancelButton">Cancelar</a></td>
-            <td><input type="submit" name="InsertPhotos" value="Submit"/></td>
+            <td><a href="main.php" class="cancelButton">Cancel</a></td>
+            <td><input type="submit" name="InsertPhotos" value="Submit" class="submitButton"/></td>
         </tr>
         </form>
     </table>    	
