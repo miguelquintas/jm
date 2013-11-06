@@ -82,7 +82,7 @@ function initialize() {
               <li class="name">
                 <h1>
                   <a href="#">
-                    <img src="img/logo.png" width="170">
+                    <img src="img/logo.png" width="180">
                   </a>
                 </h1>
               </li>
