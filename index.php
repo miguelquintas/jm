@@ -82,7 +82,7 @@ function initialize() {
               <li class="name">
                 <h1>
                   <a href="#">
-                    Home
+                    <img src="img/logo.png" width="170">
                   </a>
                 </h1>
               </li>
@@ -90,7 +90,7 @@ function initialize() {
             </ul>
 
             <section class="top-bar-section">
-             <ul class="left">
+             <ul class="right">
                 <li><a href="#sobrenos">Über uns</a></li>
                 <li><a href="#out_mon">Outfit das Monates</a></li>
                 <li><a href="#galerie">Galerie</a></li>
