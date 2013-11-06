@@ -354,11 +354,8 @@ function initialize() {
     <div class="large-12 columns">
       <hr>
       <div class="row">
-        <div class="large-6 columns subheader">
-          &copy; Copyright 2013
-        </div>
         <div class="large-12 columns">
-            <h6 class="subheader">All trademarks and registered trademarks are the property of their respective owners.</h6>
+            <h6 class="subheader left">&copy; Copyright 2013</h6><h6 class="subheader right">All trademarks and registered trademarks are the property of their respective owners.</h6>
         </div>
       </div>
     </div>
