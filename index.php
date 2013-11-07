@@ -85,6 +85,7 @@ function initialize() {
                     <img src="img/logo.png" width="180">
                   </a>
                 </h1>
+
               </li>
               <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
             </ul>
@@ -105,8 +106,7 @@ function initialize() {
   <!-- End Navigation -->
   </div>    
 </div>
-<br />
-<br />
+
 <br />
 <div class="row_full"> 
     <div class="large-12">
@@ -147,9 +147,7 @@ function initialize() {
     </div>
     <!-- End Mobile Header -->
   </div>
- 
-<br />
-<br />
+
 <br />
 
     <div class="row">
@@ -201,7 +199,7 @@ function initialize() {
     </div>
 
     <!-- Outfit of the month -->
-<br />
+
 <br />
 <div class="row">
     <h4><a name="out_mon">Outfit das Monates</a></h4>
@@ -233,7 +231,7 @@ function initialize() {
     </div>
 
     <!-- End utfit of the month -->
-<br />
+
 <br />
     <!-- Gallery -->
 <div class="row hide-on-small">
@@ -267,7 +265,7 @@ function initialize() {
 
     <!-- End Gallery-->
   
-<br />
+
 <br />
 <div class="row hide-for-small">     
           <h4><a name="marken">Unsere Marken</a></h4>
@@ -306,7 +304,7 @@ function initialize() {
               </div>
           </div>
 </div>
-<br />
+
 <br />  
 <div class="row">
           <h4><a name="contactos">Kontakte</a></h4>
@@ -335,7 +333,7 @@ function initialize() {
             </div>
           </div>
 </div>
-<br />
+
 <br />
 <div class="row hide-for-small">
           <h4><a name="social">Social</a></h4>
