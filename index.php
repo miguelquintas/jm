@@ -116,19 +116,19 @@ function initialize() {
         <!--<h3> Willkommen zu Wilhardt Mode </h3>-->
          <ul id="featured1" data-orbit data-options="timer_speed:5000;bullets:false;animation:fade;pause_on_hover:false;navigation_arrows:false;slide_number:false;">
               <li>
-                <img src="img/top1.jpg"/>
+                <img src="img/top1.jpg" style='width:100%;'/>
               </li>
               <li>
-                <img src="img/top2.jpg" />
+                <img src="img/top2.jpg" style='width:100%;' />
               </li>
               <li>
-                <img src="img/top3.jpg" />
+                <img src="img/top3.jpg" style='width:100%;' />
               </li>
               <li>
-                <img src="img/top5.jpg" />
+                <img src="img/top5.jpg" style='width:100%;' />
               </li>
               <li>
-                <img src="img/top6.jpg" />
+                <img src="img/top6.jpg" style='width:100%;' />
               </li>
             </ul>
          <!-- Timer and Play/Pause Button -->
