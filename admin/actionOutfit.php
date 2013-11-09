@@ -113,9 +113,12 @@ function upload_images($arrayOfImages)
 					//Efectua o upload da imagem para a directoria
 					$simpleImage = new SimpleImage();
 					$simpleImage->load($image['tmp_name']);
-					$simpleImage->resize(500,500);
+					if ($simpleImage->getWidth() > 1500)
+					{
+						$simpleImage->resizeToWidth(1500);	
+					}
 					$simpleImage->save($newname);
-					$simpleImage->resize(200,200);
+					$simpleImage->resizeToWidth(200);
 					$simpleImage->save($newnameThumb);
 
 					$counter++;
