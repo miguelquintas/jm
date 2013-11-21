@@ -107,9 +107,9 @@ function initialize() {
   </div>    
 </div>
 
-<br />
+
 <div class="row_full"> 
-    <div class="large-12">
+    <div class="large-12 hide-for-small">
     
     <!-- Desktop Slider -->
         <div class="preloader"></div>
