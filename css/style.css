@@ -54,3 +54,6 @@ body {
 h4 a {
   color:white;
 }
+a:hover, a:focus {
+  color:white;
+  }

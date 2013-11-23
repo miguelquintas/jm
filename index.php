@@ -149,7 +149,18 @@ function initialize() {
   </div>
 
 <br />
-
+    <div class="row">
+      <div class="large-12 columns">
+       <h4><a name="neuigkeiten">Über Uns</a></h4> 
+          <div class="row">
+              <div class="panel radius">
+                <div class="row">
+                  <p>Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla   Wir sind bla bla bla  Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla</p>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
     <div class="row">
     <h4><a name="neuigkeiten">Neuigkeiten</a></h4>
     <div class="large-12 columns">
@@ -218,6 +229,7 @@ function initialize() {
                                        
                                         ?>
                                                 <li> <a href="<?php echo 'img/'.$row['image_name']; ?>"> <img src=<?php echo 'img/thumb/'.$row['image_name']; ?> width="200"/>
+                                          
                                         <?
                                     }
                   ?>
@@ -322,7 +334,7 @@ function initialize() {
                     <li class="fn">Wildhardt women's wear Wiesbaden:</li>
                     <li class="street-address">Adresse: Rathausstraße 47</li>
                     <li class="locality">65203 Wiesbaden </li>
-                    <li class="locality">Telefon: <a href:"tel:0611 2048078">0611 2048078 </a> </li>
+                    <li class="locality">Telefon: <a href:"tel:0611 7167302">0611 7167302 </a> </li>
                   </ul>
                 </div>
 
