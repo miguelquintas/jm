@@ -15,7 +15,7 @@
 
   <title>Wildhardt Mode</title>
 
-  <link rel="stylesheet" href="css/normalize.css">
+  
   <link rel="stylesheet" href="css/foundation.css">
   <link rel="stylesheet" href="css/style.css">
   <!-- Google font -->
@@ -23,7 +23,7 @@
 
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
-  <script src="js/vendor/custom.modernizr.js"></script>
+  <script src="js/modernizr.js"></script>
   <script src="js/googleapi.js"></script>
   
   <script>
@@ -82,7 +82,7 @@ function initialize() {
               <li class="name">
                 <h1>
                   <a href="#">
-                    <img src="img/logo.png">
+                    <img src="img/logo.png" width="200px">
                   </a>
                 </h1>
 
@@ -150,12 +150,14 @@ function initialize() {
 
 <br />
     <div class="row">
-      <div class="large-12 columns">
        <h4><a name="neuigkeiten">Über Uns</a></h4> 
+       <div class="large-12 columns">
           <div class="row">
               <div class="panel radius">
                 <div class="row">
+                  <div class="large-12 columns">
                   <p>Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla   Wir sind bla bla bla  Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla</p>
+                  </div>
                 </div>
               </div>
           </div>
@@ -371,14 +373,10 @@ function initialize() {
     </div>
   </footer>
 
-  <script>
-  document.write('<script src=js/vendor/' +
-  ('__proto__' in {} ? 'zepto' : 'jquery') +
-  '.js><\/script>')
-  </script>
+  <script src="js/jquery.js"></script>
   <script src="js/foundation.min.js"></script>
-  <script>
-    $(document).foundation();
+    <script>
+      $(document).foundation();
     google.maps.event.addDomListener(window, 'load', initialize);
   </script>
   <!-- End Footer -->
