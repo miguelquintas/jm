@@ -19,7 +19,7 @@
 * http://www.gnu.org/licenses/gpl.html
 *
 */
- 
+
 class SimpleImage  {
  
    var $image;
