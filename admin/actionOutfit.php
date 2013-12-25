@@ -13,6 +13,7 @@ define ("MAX_SIZE","10000");
 if (isset($_POST['InsertPhotos']))
 {
 	$images = $_FILES['images'];
+	$title = $_POST['title'];
 
 	if ($images != null)
 	{
@@ -24,7 +25,7 @@ if (isset($_POST['InsertPhotos']))
 		{
 			foreach ($imagesReturn as $image) 
 			{
-				$query = 'INSERT INTO Outfit (image_name, description) VALUES ("'.$image.'", "some description")';
+				$query = 'INSERT INTO Outfit (image_name, description) VALUES ("'.$image.'", "'.$title.'")';
 			
 				if (!mysql_query($query, $con))
 			  	{
@@ -41,40 +42,39 @@ if (isset($_POST['InsertPhotos']))
 	}
 }
 
-// remove selected photos
 if (isset($_POST['RemovePhotos']))
 {
-	if (isset($_POST['option']))
-	{
-		foreach ($_POST['option'] as $option) 
-		{
-	  		$query = mysql_query('SELECT image_name FROM Outfit WHERE id = "'.$option.'"');
-			$queryDelete = 'DELETE FROM Outfit WHERE id = "'.$option.'"';
-			
-			while ($row = mysql_fetch_array($query))
+        if (isset($_POST['option']))
+        {
+                foreach ($_POST['option'] as $option) 
+                {
+                          $query = mysql_query('SELECT image_name FROM Outfit WHERE id = "'.$option.'"');
+                        $queryDelete = 'DELETE FROM Outfit WHERE id = "'.$option.'"';
+                        
+                        while ($row = mysql_fetch_array($query))
             {
-				// delete image from filesystem
-				$filename = "../img/" . $row['image_name'];
-				$filenameThumb = "../img/thumb/" . $row['image_name']; 
-				
-				unlink($filename);
-				unlink($filenameThumb);
-			}
+                                // delete image from filesystem
+                                $filename = "../img/" . $row['image_name'];
+                                $filenameThumb = "../img/thumb/" . $row['image_name']; 
+                                
+                                unlink($filename);
+                                unlink($filenameThumb);
+                        }
 
-			if (!mysql_query($queryDelete, $con))
-	  		{
-	  			die('Error: '.mysql_error($con));
-	  		}
-		}
-		
-		mysql_close($con);
-		
-		header('location: outfit.php');
-	}
-	else
-	{
-		header('location: outfit.php');
-	}	
+                        if (!mysql_query($queryDelete, $con))
+                          {
+                                  die('Error: '.mysql_error($con));
+                          }
+                }
+                
+                mysql_close($con);
+                
+                header('location: outfit.php');
+        }
+        else
+        {
+                header('location: outfit.php');
+        }        
 }
 
 function upload_images($arrayOfImages)
@@ -124,12 +124,9 @@ function upload_images($arrayOfImages)
 					//Efectua o upload da imagem para a directoria
 					$simpleImage = new SimpleImage();
 					$simpleImage->load($image['tmp_name']);
-					if ($simpleImage->getWidth() > 1500)
-					{
-						$simpleImage->resizeToWidth(1500);	
-					}
+					$simpleImage->resize(700,500);
 					$simpleImage->save($newname);
-					$simpleImage->resizeToWidth(200);
+					$simpleImage->resize(200,200);
 					$simpleImage->save($newnameThumb);
 
 					$counter++;

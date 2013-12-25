@@ -64,6 +64,12 @@
             <td width="100">Upload photos: </td>
         </tr>
         <tr>
+            <td>
+                Description:<br/>
+                <input type="text" name="title"></input>
+            <td>            
+        </tr>
+        <tr>
             <td><input type="file" name="images[]" multiple="multiple"></input><td>            
         </tr>
         <tr height="30">
@@ -73,5 +79,11 @@
         </form>
     </table>    	
 </div>
+<br>
+Bitte nür fotos hochladen mit Horizontal Blick. 
+
+Zum Beispiel: 
+
+<img src="../img/iphone5-horizontal.png">
 
 <?php include('footer.php'); ?>

@@ -5,24 +5,14 @@ body {
   font-weight: 300; 
 }
 
-/* Default header styles */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Josefin Sans', sans-serif;
-
-}
 .top-bar
 {
 	background: #3A3A3A;
 
 }
-.top-bar .toggle-topbar a {
-
-  font-size: 0.8125rem;
-}
 
 #google-map *, #google-map *:before, #google-map *:after {
          
-         font-family: 'Josefin Sans', sans-serif;
     }
     #google-map img {
         max-width: none;
@@ -63,14 +53,16 @@ h1, h2, h3, h4, h5, h6 {
   margin-right:0px;
 }
 
+.row{
+  max-width: 80em;
+}
+
 h4 a {
   color:white;
 }
 a:hover, a:focus {
   color:white;
   }
-
-
 
 
 

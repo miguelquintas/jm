@@ -23,8 +23,10 @@ include ('connection.php');
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
 
-    <script src="js/modernizr.js"></script>
-    <script src="js/googleapi.js"></script>
+    <script src="js/vendor/custom.modernizr.js"></script>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFKuFujf9kbA6070NjYQbvR5TLNBW3KbI&sensor=true">
+  </script>
 
     <script>
 
@@ -92,7 +94,7 @@ include ('connection.php');
 
               <section class="top-bar-section">
                 <ul class="right">
-                    <li><a href="#sobrenos">Über uns</a></li>
+                    <!-- <li><a href="#sobrenos">Über uns</a></li> -->
                     <li><a href="#out_mon">Outfit das Monates</a></li>
                     <li><a href="#galerie">Galerie</a></li>
                     <li><a href="#marken">Unsere Marken</a></li>
@@ -149,20 +151,22 @@ include ('connection.php');
 </div>
 
 <br />
-<div class="row">
-    <h4><a name="neuigkeiten">Über Uns</a></h4> 
-    <div class="large-12 columns">
-        <div class="row">
-            <div class="panel radius">
+ <!-- 
+      <div class="row">
+       <h4><a name="neuigkeiten">Über Uns</a></h4> 
+       <div class="large-12 columns">
+          <div class="row">
+              <div class="panel radius">
                 <div class="row">
-                    <div class="large-12 columns">
-                        <p>Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla   Wir sind bla bla bla  Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla</p>
-                    </div>
+                  <div class="large-12 columns">
+                  <p>Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla   Wir sind bla bla bla  Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla Wir sind bla bla bla</p>
+                  </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
+              </div>
+          </div>
+      </div>
+    </div> 
+     -->
 <div class="row">
     <h4><a name="neuigkeiten">Neuigkeiten</a></h4>
     <div class="large-12 columns">
@@ -223,18 +227,18 @@ include ('connection.php');
                 <ul class="clearing-thumbs" data-clearing>
 
                     <?php
-                    $query = mysql_query("SELECT * FROM Outfit ORDER BY id ASC");
-                    $count = mysql_num_rows($query);
+                            $query = mysql_query("SELECT * FROM Outfit ORDER BY id ASC");
+                            $count = mysql_num_rows($query);
 
-                    while ($row = mysql_fetch_array($query))
-                    {
+                            while ($row = mysql_fetch_array($query))
+                            {
 
-                        ?>
-                        <li> <a href="<?php echo 'img/'.$row['image_name']; ?>"> <img src=<?php echo 'img/thumb/'.$row['image_name']; ?> width="200"/>
-
-                            <?
-                        }
-                        ?>
+                                ?>
+                                     <li class="th"> <a href="<?php echo 'img/'.$row['image_name']; ?>"> <img <?php echo 'data-caption="'.$row['description'].'"'; ?> src=<?php echo 'img/thumb/'.$row['image_name']; ?> width="105px"/>
+                                                  
+                                <?
+                            }
+                    ?>
                         <!--<li><a href="img/01383508963.jpg"><img src="img/thumb/01383508963.jpg"></a></li> --> 
                     </ul>
                     <!-- End Content -->
@@ -263,9 +267,7 @@ include ('connection.php');
                         {
 
                             ?>
-                            <li>
-                                <a href="<?php echo 'img/'.$row['image_name']; ?>"><img src=<?php echo 'img/thumb/'.$row['image_name']; ?> width="100"/></a>
-                            </li>
+                                                <li class="th"> <a href="<?php echo 'img/'.$row['image_name']; ?>"> <img <?php echo 'data-caption="'.$row['description'].'"'; ?>  src=<?php echo 'img/thumb/'.$row['image_name']; ?> width="105px"/>
                             <?
                         }
                         ?>
@@ -372,13 +374,17 @@ include ('connection.php');
         </div>
     </footer>
 
-    <script src="js/jquery.js"></script>
-    <script src="js/foundation.min.js"></script>
     <script>
+  document.write('<script src=js/vendor/' +
+  ('__proto__' in {} ? 'zepto' : 'jquery') +
+  '.js><\/script>')
+  </script>
+  <script src="js/foundation.min.js"></script>
+  <script>
     $(document).foundation();
     google.maps.event.addDomListener(window, 'load', initialize);
-    </script>
-    <!-- End Footer -->
+  </script>
+  <!-- End Footer -->
 
 </body>
 </html>
