@@ -48,9 +48,20 @@ if (isset($_POST['RemovePhotos']))
 	{
 		foreach ($_POST['option'] as $option) 
 		{
-			$query = 'DELETE FROM Outfit WHERE id = "'.$option.'"';
-	
-			if (!mysql_query($query, $con))
+	  		$query = mysql_query('SELECT image_name FROM Outfit WHERE id = "'.$option.'"');
+			$queryDelete = 'DELETE FROM Outfit WHERE id = "'.$option.'"';
+			
+			while ($row = mysql_fetch_array($query))
+            {
+				// delete image from filesystem
+				$filename = "../img/" . $row['image_name'];
+				$filenameThumb = "../img/thumb/" . $row['image_name']; 
+				
+				unlink($filename);
+				unlink($filenameThumb);
+			}
+
+			if (!mysql_query($queryDelete, $con))
 	  		{
 	  			die('Error: '.mysql_error($con));
 	  		}
