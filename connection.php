@@ -6,10 +6,9 @@
 	}
 	else
 	{
-		$con = mysql_connect('localhost', 'root', 'root');
-		$bd = 'wildhardt';
-		//$con = mysql_connect('hostingmysql116', 'BB94_unikej', 'bB_Uni,Ke');
-		//$bd = 'unikejewellery_com_bbsite';
+		$con = mysql_connect('db508007135.db.1and1.com:3306', 'dbo508007135', 'Asff123G!');
+		$bd = 'db508007135';
+			
 	}
 	
 	
