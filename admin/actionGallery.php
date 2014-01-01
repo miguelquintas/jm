@@ -1,23 +1,41 @@
-	<?php
+<?php
 
-	ini_set('error_reporting', E_ALL);
-	ini_set('display_errors','On');
+ini_set('error_reporting', E_ALL);
+ini_set('display_errors','On');
 
-	include ('../connection.php');
-	include ('simpleImage.php');
-	include ('utils.php');
+include ('../connection.php');
+include ('simpleImage.php');
+include ('utils.php');
 
-	define ("MAX_SIZE","10000");
+define ("MAX_SIZE","10000");
 
-	// insert photos
-	if (isset($_POST['InsertPhotos']))
+$error = false;
+
+// insert photos
+if (isset($_POST['InsertPhotos']))
+{
+	$images = $_FILES['images'];
+
+	if ($images != null)
 	{
-		$images = $_FILES['images'];
-
-		if ($images != null)
+		$imagesReArray = reArrayFiles($images);	
+		
+		foreach ($imagesReArray as $img)
 		{
-			$imagesReArray = reArrayFiles($images);	
-			
+			$imageSize = getimagesize($img['tmp_name']);
+
+			if ($imageSize[0] > 1500)
+			{
+				$error = true;
+			}
+		}
+
+		if ($error == true)
+		{
+			header('location:gallery.php?error=1');
+		}
+		else
+		{
 			$imagesReturn = upload_images($imagesReArray);
 
 			if ($imagesReturn != null)
@@ -40,103 +58,104 @@
 			}
 		}
 	}
+}
 
-	// remove selected photos
-	if (isset($_POST['RemovePhotos']))
+// remove selected photos
+if (isset($_POST['RemovePhotos']))
+{
+	if (isset($_POST['option']))
 	{
-		if (isset($_POST['option']))
+		foreach ($_POST['option'] as $option) 
 		{
-			foreach ($_POST['option'] as $option) 
+			$query = mysql_query('SELECT image_name FROM Gallery WHERE id = "'.$option.'"');
+			$queryDelete = 'DELETE FROM Gallery WHERE id = "'.$option.'"';
+			
+			while ($row = mysql_fetch_array($query))
 			{
-				$query = mysql_query('SELECT image_name FROM Gallery WHERE id = "'.$option.'"');
-				$queryDelete = 'DELETE FROM Gallery WHERE id = "'.$option.'"';
+				// delete image from filesystem
+				$filename = "../img/" . $row['image_name'];
+				$filenameThumb = "../img/thumb/" . $row['image_name']; 
 				
-				while ($row = mysql_fetch_array($query))
-				{
-					// delete image from filesystem
-					$filename = "../img/" . $row['image_name'];
-					$filenameThumb = "../img/thumb/" . $row['image_name']; 
-					
-					unlink($filename);
-					unlink($filenameThumb);
-				}
-
-				if (!mysql_query($queryDelete, $con))
-				{
-					die('Error: '.mysql_error($con));
-				}
+				unlink($filename);
+				unlink($filenameThumb);
 			}
-			
-			mysql_close($con);
-			
-			header('location: gallery.php');
-		}
-		else
-		{
-			header('location: gallery.php');
-		}	
-	}
 
-	function upload_images($arrayOfImages)
-	{
-		$numberOfImages = sizeof($arrayOfImages);
-		$uploadedImages = new ArrayObject();
+			if (!mysql_query($queryDelete, $con))
+			{
+				die('Error: '.mysql_error($con));
+			}
+		}
 		
-		$counter = 0;
+		mysql_close($con);
+		
+		header('location: gallery.php');
+	}
+	else
+	{
+		header('location: gallery.php');
+	}	
+}
 
-		foreach ($arrayOfImages as $image) 
+function upload_images($arrayOfImages)
+{
+	$numberOfImages = sizeof($arrayOfImages);
+	$uploadedImages = new ArrayObject();
+	
+	$counter = 0;
+
+	foreach ($arrayOfImages as $image) 
+	{
+		//Verifica se existe alguma imagem para ser importada
+		if($image)//Existe uma imagem para ser importada
 		{
-			//Verifica se existe alguma imagem para ser importada
-			if($image)//Existe uma imagem para ser importada
+			//Retira os elementos "/"
+			$filename = stripslashes($image['name']);
+			//Verifica qual a extensão do ficheiro
+			$extension = getExtension($filename);
+			//Coloca todos os caracteres da extensão com letra minuscula
+			$extension = strtolower($extension);
+			//Verifica os formatos de imagem que podem ser importados
+			
+			if (($extension != "jpg") && ($extension != "jpeg") && ($extension != "gif") && ($extension != "png"))//Formato diferente dos permitidos 
 			{
-				//Retira os elementos "/"
-				$filename = stripslashes($image['name']);
-				//Verifica qual a extensão do ficheiro
-				$extension = getExtension($filename);
-				//Coloca todos os caracteres da extensão com letra minuscula
-				$extension = strtolower($extension);
-				//Verifica os formatos de imagem que podem ser importados
-				
-				if (($extension != "jpg") && ($extension != "jpeg") && ($extension != "gif") && ($extension != "png"))//Formato diferente dos permitidos 
+				//print error message
+				//echo $extension." <strong>Imagem:</strong> Este formato não pode ser importado! Utilize o formato jpg ou gif";
+			}
+			else//Formato permitido
+			{	
+				//Verifica qual o tamanho da imagem seleccionada
+				$size = $image['size'];
+				//Verifica se o tamanho é superior a 10000kb
+				if ($size > MAX_SIZE * 1024)//tamanho superior
 				{
-					//print error message
-					//echo $extension." <strong>Imagem:</strong> Este formato não pode ser importado! Utilize o formato jpg ou gif";
+					//echo "A imagem nao pode execer o tamanho de 10000kb <br/>";
 				}
-				else//Formato permitido
-				{	
-					//Verifica qual o tamanho da imagem seleccionada
-					$size = $image['size'];
-					//Verifica se o tamanho é superior a 10000kb
-					if ($size > MAX_SIZE * 1024)//tamanho superior
-					{
-						//echo "A imagem nao pode execer o tamanho de 10000kb <br/>";
-					}
-					else//tamanho inferior
-					{
-						//Gera um nome para a imagem
-						$image_name = $counter . time().'.'.$extension;
-						$image_name = str_replace(" ", "", $image_name);
-						
-						//Directoria para a qual a imagem será enviada
-						$newname = "../img/" . $image_name;
-						$newnameThumb = "../img/thumb/" . $image_name; 
-						
-						//Efectua o upload da imagem para a directoria
-						$simpleImage = new SimpleImage();
-						$simpleImage->load($image['tmp_name']);
-						$simpleImage->resize(500,500);
-						$simpleImage->save($newname);
-						$simpleImage->resize(200,200);
-						$simpleImage->save($newnameThumb);
+				else//tamanho inferior
+				{
+					//Gera um nome para a imagem
+					$image_name = $counter . time().'.'.$extension;
+					$image_name = str_replace(" ", "", $image_name);
+					
+					//Directoria para a qual a imagem será enviada
+					$newname = "../img/" . $image_name;
+					$newnameThumb = "../img/thumb/" . $image_name; 
+					
+					//Efectua o upload da imagem para a directoria
+					$simpleImage = new SimpleImage();
+					$simpleImage->load($image['tmp_name']);
+					$simpleImage->resize(500,500);
+					$simpleImage->save($newname);
+					$simpleImage->resize(200,200);
+					$simpleImage->save($newnameThumb);
 
-						$counter++;
-						$uploadedImages->append($image_name);				
-					}
+					$counter++;
+					$uploadedImages->append($image_name);				
 				}
 			}
 		}
-
-		return $uploadedImages;
 	}
 
-	?>
+	return $uploadedImages;
+}
+
+?>

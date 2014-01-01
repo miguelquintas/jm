@@ -9,6 +9,8 @@ include ('utils.php');
 
 define ("MAX_SIZE","10000");
 
+$error = false;
+
 // insert photos
 if (isset($_POST['InsertPhotos']))
 {
@@ -18,25 +20,42 @@ if (isset($_POST['InsertPhotos']))
 	{
 		$imagesReArray = reArrayFiles($images);	
     	
-    	$imagesReturn = upload_images($imagesReArray);
-
-		if ($imagesReturn != null)
+    	foreach ($imagesReArray as $img)
 		{
-			foreach ($imagesReturn as $image) 
+			$imageSize = getimagesize($img['tmp_name']);
+
+			if ($imageSize[0] > 1500)
 			{
-				$query = 'INSERT INTO Outfit (image_name, description) VALUES ("'.$image.'", "some description")';
-			
-				if (!mysql_query($query, $con))
-			  	{
-			  		die('Error: '.mysql_error($con));
-			  	}
-
-			  	$query = null;
+				$error = true;
 			}
+		}
 
-			mysql_close($con);
+		if ($error == true)
+		{
+			header('location:outfit.php?error=1');
+		}
+		else
+		{
+	    	$imagesReturn = upload_images($imagesReArray);
+
+			if ($imagesReturn != null)
+			{
+				foreach ($imagesReturn as $image) 
+				{
+					$query = 'INSERT INTO Outfit (image_name, description) VALUES ("'.$image.'", "some description")';
 				
-			header('location: outfit.php');
+					if (!mysql_query($query, $con))
+				  	{
+				  		die('Error: '.mysql_error($con));
+				  	}
+
+				  	$query = null;
+				}
+
+				mysql_close($con);
+					
+				header('location: outfit.php');
+			}
 		}
 	}
 }

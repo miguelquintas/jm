@@ -12,6 +12,11 @@
     }
 
 	include 'header.php';
+
+    if ($_GET['error'] == '1')
+    {
+        echo '<script type="text/javascript">alert("Please Upload a image with less than 1500px width");</script>';
+    }
 ?>
 
 <div id="header">
